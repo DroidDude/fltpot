@@ -8,7 +8,6 @@
 
 	//Blocks
 	"block.fltpot.strange_dust_ore": "Strange Dust Ore",
-	"block.fltpot.deepslate_strange_dust_ore": "Deepslate Strange Dust Ore",
 	
 	//Potions
 	"item.minecraft.potion.effect.flight_potion": "Potion of Flight",

@@ -1,5 +1,5 @@
-version:2730
-autoJump:false
+version:2586
+autoJump:true
 autoSuggestions:true
 chatColors:true
 chatLinks:true
@@ -11,14 +11,13 @@ discrete_mouse_scroll:false
 invertYMouse:false
 realmsNotifications:true
 reducedDebugInfo:false
-snooperEnabled:true
+snooperEnabled:false
 showSubtitles:false
 touchscreen:false
 fullscreen:false
 bobView:true
 toggleCrouch:false
 toggleSprint:false
-darkMojangStudiosBackground:false
 mouseSensitivity:0.5
 fov:0.0
 screenEffectScale:1.0
@@ -26,7 +25,7 @@ fovEffectScale:1.0
 gamma:0.0
 renderDistance:12
 entityDistanceScaling:1.0
-guiScale:2
+guiScale:0
 particles:0
 maxFps:120
 difficulty:2
@@ -50,7 +49,7 @@ overrideWidth:0
 overrideHeight:0
 heldItemTooltips:true
 chatHeightFocused:1.0
-chatDelay:0.0
+chatDelay: 0.0
 chatHeightUnfocused:0.44366195797920227
 chatScale:1.0
 chatWidth:1.0
@@ -66,7 +65,6 @@ glDebugVerbosity:1
 skipMultiplayerWarning:false
 hideMatchedNames:true
 joinedFirstServer:false
-hideBundleTutorial:false
 syncChunkWrites:true
 key_key.attack:key.mouse.left
 key_key.use:key.mouse.right

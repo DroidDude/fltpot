@@ -3,27 +3,25 @@ package eu.newaustrianservers.fltpot.potion;
 import eu.newaustrianservers.fltpot.Main;
 import eu.newaustrianservers.fltpot.effect.Effects;
 import eu.newaustrianservers.fltpot.item.Items;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.alchemy.Potion;
-import net.minecraft.world.item.alchemy.PotionUtils;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionUtils;
 import net.minecraftforge.common.brewing.BrewingRecipe;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nonnull;
 
-public class Potions extends net.minecraft.world.item.alchemy.Potions {
+public class Potions extends net.minecraft.potion.Potions {
 
+    public static final DeferredRegister<Potion> POTIONS = DeferredRegister.create(ForgeRegistries.POTION_TYPES, Main.MODID);
 
-    public static final DeferredRegister<Potion> POTIONS = DeferredRegister.create(ForgeRegistries.POTIONS, Main.MODID);
-
-    public static final RegistryObject<Potion> FLIGHT_POTION = POTIONS.register("flight_potion", () -> new Potion( new MobEffectInstance(Effects.FLIGHT.get(), 2400)));
-    public static final RegistryObject<Potion> LONG_FLIGHT_POTION = POTIONS.register("long_flight_potion", () -> new Potion( new MobEffectInstance(Effects.FLIGHT.get(), 9600)));
-
+    public static final RegistryObject<Potion> FLIGHT_POTION = POTIONS.register("flight_potion", () -> new Potion( new EffectInstance(Effects.FLIGHT.get(), 2400)));
+    public static final RegistryObject<Potion> LONG_FLIGHT_POTION = POTIONS.register("long_flight_potion", () -> new Potion( new EffectInstance(Effects.FLIGHT.get(), 9600)));
 
     public static void addBrewingRecipe() {
 
@@ -85,4 +83,5 @@ public class Potions extends net.minecraft.world.item.alchemy.Potions {
             return ItemStack.EMPTY;
         }
     }
+
 }

@@ -1,22 +1,21 @@
 package eu.newaustrianservers.fltpot.effect;
 
 import eu.newaustrianservers.fltpot.Main;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraft.potion.Effect;
+import net.minecraft.potion.EffectType;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class Effects extends MobEffects {
+public class Effects extends net.minecraft.potion.Effects {
 
-    public static final DeferredRegister<MobEffect> EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, Main.MODID);
+    public static final DeferredRegister<Effect> EFFECTS = DeferredRegister.create(ForgeRegistries.POTIONS, Main.MODID);
 
-    public static final RegistryObject<MobEffect> FLIGHT = EFFECTS.register("flight_effect", () -> new Flight(MobEffectCategory.BENEFICIAL, 0xd9fffb));
+    public static final RegistryObject<Effect> FLIGHT = EFFECTS.register("flight_effect", () -> new Flight(EffectType.BENEFICIAL, 0xd9fffb));
 
-    public static class Flight extends MobEffect{
+    public static class Flight extends Effect{
 
-        public Flight(MobEffectCategory typeIn, int liquidColorIn) {
+        public Flight(EffectType typeIn, int liquidColorIn) {
 
             super(typeIn, liquidColorIn);
         }

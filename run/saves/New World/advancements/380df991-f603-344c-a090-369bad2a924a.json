@@ -1,13 +1,44 @@
 {
+  "minecraft:recipes/decorations/smoker": {
+    "criteria": {
+      "has_furnace": "2021-09-30 20:00:33 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_blasting": {
+    "criteria": {
+      "has_iron_pickaxe": "2021-10-01 15:05:43 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/coal": {
+    "criteria": {
+      "has_coal_block": "2021-09-30 20:00:37 +0200"
+    },
+    "done": true
+  },
+  "minecraft:story/iron_tools": {
+    "criteria": {
+      "iron_pickaxe": "2021-10-01 15:05:43 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_smelting": {
+    "criteria": {
+      "has_iron_pickaxe": "2021-10-01 15:05:43 +0200"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:cold_ocean": "2021-09-29 20:33:30 +0200",
-      "minecraft:taiga": "2021-09-29 20:30:48 +0200",
-      "minecraft:taiga_hills": "2021-09-29 20:33:01 +0200",
-      "minecraft:beach": "2021-09-29 20:23:44 +0200",
-      "minecraft:river": "2021-09-29 20:33:31 +0200"
+      "minecraft:forest": "2021-09-30 19:59:15 +0200",
+      "minecraft:mountains": "2021-09-30 20:03:27 +0200",
+      "minecraft:birch_forest": "2021-09-30 20:04:48 +0200",
+      "minecraft:dark_forest": "2021-09-30 20:04:27 +0200",
+      "minecraft:river": "2021-09-30 19:59:36 +0200",
+      "minecraft:plains": "2021-09-30 19:59:37 +0200"
     },
     "done": false
   },
-  "DataVersion": 2730
+  "DataVersion": 2586
 }
