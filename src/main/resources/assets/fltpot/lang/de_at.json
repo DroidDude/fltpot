@@ -1,0 +1,36 @@
+{
+	//Items
+	"item.fltpot.strange_dust": "Eignortiga Stab",
+	"item.fltpot.magic_powder": "Magischs Puiver",
+	"item.fltpot.magic_nugget": "Magischa Klumpn",
+	"item.fltpot.magic_ingot": "Magischa Borrn",
+	
+
+	//Blocks
+	"block.fltpot.strange_dust_ore": "Eigenortiges Mineral",
+	"block.fltpot.deepslate_strange_dust_ore": "Eigenortiges Tiafenschiefa Mineral",
+	
+	//Potions
+	"item.minecraft.potion.effect.flight_potion": "Tronk des Fluges",
+	"item.minecraft.potion.effect.long_flight_potion": "Tronk des Fluges",
+	"item.minecraft.splash_potion.effect.flight_potion": "Wurftronk des Fluges",
+	"item.minecraft.splash_potion.effect.long_flight_potion": "Wurftronk des Fluges",
+	"item.minecraft.lingering_potion.effect.flight_potion": "Verweiltronk des Flugest",
+	"item.minecraft.lingering_potion.effect.long_flight_potion": "Verweiltronk des Flugest",
+	"item.minecraft.potion.flight_potion": "Flugtronk",
+	"item.minecraft.potion.long_flight_potion": "Flugtronk",
+	"item.minecraft.splash_effect.flight_potion": "Flugtronk",
+	"item.minecraft.splash_effect.long_flight_potion": "Flugtronk",
+	"item.minecraft.lingering_effect.flight_potion": "Flugtronk",
+	"item.minecraft.lingering_potion.long_flight_potion": "Flugtronk",
+	
+	//Tipped Arrows
+	"item.minecraft.tipped_arrow.effect.flight_potion": "Pfeil des Fluges",
+	"item.minecraft.tipped_arrow.effect.long_flight_potion": "Pfeil des Fluges",
+	"item.minecraft.tipped_arrow.flight_potion": "Flugtronk",
+	"item.minecraft.tipped_arrow.long_flight_potion": "Flugtronk",
+	
+	//Effects
+	"effect.fltpot.flight_effect": "Flug"
+	
+}

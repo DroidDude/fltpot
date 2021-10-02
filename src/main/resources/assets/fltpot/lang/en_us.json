@@ -1,0 +1,36 @@
+{
+	//Items
+	"item.fltpot.strange_dust": "Strange Dust",
+	"item.fltpot.magic_powder": "Magic Powder",
+	"item.fltpot.magic_nugget": "Magic Nugget",
+	"item.fltpot.magic_ingot": "Magic Ingot",
+	
+
+	//Blocks
+	"block.fltpot.strange_dust_ore": "Strange Dust Ore",
+	"block.fltpot.deepslate_strange_dust_ore": "Deepslate Strange Dust Ore",
+	
+	//Potions
+	"item.minecraft.potion.effect.flight_potion": "Potion of Flight",
+	"item.minecraft.potion.effect.long_flight_potion": "Potion of Flight",
+	"item.minecraft.splash_potion.effect.flight_potion": "Splash Potion of Flight",
+	"item.minecraft.splash_potion.effect.long_flight_potion": "Splash Potion of Flight",
+	"item.minecraft.lingering_potion.effect.flight_potion": "Lingering Potion of Flight",
+	"item.minecraft.lingering_potion.effect.long_flight_potion": "Lingering Potion of Flight",
+	"item.minecraft.potion.flight_potion": "Flight Potion",
+	"item.minecraft.potion.long_flight_potion": "Flight Potion",
+	"item.minecraft.splash_effect.flight_potion": "Flight Potion",
+	"item.minecraft.splash_effect.long_flight_potion": "Flight Potion",
+	"item.minecraft.lingering_effect.flight_potion": "Flight Potion",
+	"item.minecraft.lingering_potion.long_flight_potion": "Flight Potion",
+	
+	//Tipped Arrows
+	"item.minecraft.tipped_arrow.effect.flight_potion": "Arrow of Flight",
+	"item.minecraft.tipped_arrow.effect.long_flight_potion": "Arrow of Flight",
+	"item.minecraft.tipped_arrow.flight_potion": "Flight Potion",
+	"item.minecraft.tipped_arrow.long_flight_potion": "Flight Potion",
+	
+	//Effects
+	"effect.fltpot.flight_effect": "Flight"
+	
+}

@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "###",
+        "RGT",
+        "###"
+    ],
+    "key":
+    {
+        "#":
+        {
+            "item": "fltpot:strange_dust"
+        },
+        "R":
+        {
+            "item": "minecraft:redstone"
+        },
+        "G":
+        {
+            "item": "minecraft:ghast_tear"
+        },
+        "T":
+        {
+            "item": "minecraft:glowstone_dust"
+        }
+    },
+    "result":
+    {
+        "item": "fltpot:magic_powder",
+        "count": 3
+    }
+}

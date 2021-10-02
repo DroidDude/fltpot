@@ -1,0 +1,36 @@
+{
+	//Items
+	"item.fltpot.strange_dust": "Eigenartiger Staub",
+	"item.fltpot.magic_powder": "Magisches Pulver",
+	"item.fltpot.magic_nugget": "Magischer Klumpen",
+	"item.fltpot.magic_ingot": "Magischer Barren",
+	
+
+	//Blocks
+	"block.fltpot.strange_dust_ore": "Eigenartiges Mineral",
+	"block.fltpot.deepslate_strange_dust_ore": "Eigenartiges Tiefenschiefer Mineral",
+	
+	//Potions
+	"item.minecraft.potion.effect.flight_potion": "Trank des Fluges",
+	"item.minecraft.potion.effect.long_flight_potion": "Trank des Fluges",
+	"item.minecraft.splash_potion.effect.flight_potion": "Wurftrank des Fluges",
+	"item.minecraft.splash_potion.effect.long_flight_potion": "Wurftrank des Fluges",
+	"item.minecraft.lingering_potion.effect.flight_potion": "Verweiltrank des Flugest",
+	"item.minecraft.lingering_potion.effect.long_flight_potion": "Verweiltrank des Flugest",
+	"item.minecraft.potion.flight_potion": "Flugtrank",
+	"item.minecraft.potion.long_flight_potion": "Flugtrank",
+	"item.minecraft.splash_effect.flight_potion": "Flugtrank",
+	"item.minecraft.splash_effect.long_flight_potion": "Flugtrank",
+	"item.minecraft.lingering_effect.flight_potion": "Flugtrank",
+	"item.minecraft.lingering_potion.long_flight_potion": "Flugtrank",
+	
+	//Tipped Arrows
+	"item.minecraft.tipped_arrow.effect.flight_potion": "Pfeil des Fluges",
+	"item.minecraft.tipped_arrow.effect.long_flight_potion": "Pfeil des Fluges",
+	"item.minecraft.tipped_arrow.flight_potion": "Flugtrank",
+	"item.minecraft.tipped_arrow.long_flight_potion": "Flugtrank",
+	
+	//Effects
+	"effect.fltpot.flight_effect": "Flug"
+	
+}
