@@ -1,6 +1,0 @@
-{
-   "parent": "block/cube_all",
-   "textures": {
-       "all": "fltpot:block/deepslate_strange_dust_ore"
-   }
-}

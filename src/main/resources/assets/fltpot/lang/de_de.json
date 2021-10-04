@@ -8,7 +8,6 @@
 
 	//Blocks
 	"block.fltpot.strange_dust_ore": "Eigenartiges Mineral",
-	"block.fltpot.deepslate_strange_dust_ore": "Eigenartiges Tiefenschiefer Mineral",
 	
 	//Potions
 	"item.minecraft.potion.effect.flight_potion": "Trank des Fluges",
