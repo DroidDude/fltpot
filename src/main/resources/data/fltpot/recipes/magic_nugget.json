@@ -1,20 +1,14 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern":
+    "type": "minecraft:crafting_shapeless",
+    "ingredients":
     [
-        "NNN",
-        "NNN",
-        "NNN"
-    ],
-    "key":
-    {
-        "N":
         {
-            "item": "fltpot:magic_nugget"
+            "item": "fltpot:magic_ingot"
         }
-    },
+    ],
     "result":
     {
-        "item": "fltpot:magic_ingot"
+        "item": "fltpot:magic_nugget",
+        "count": 9
     }
 }
