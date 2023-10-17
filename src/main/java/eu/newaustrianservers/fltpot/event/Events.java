@@ -37,10 +37,14 @@ public class Events {
 
                 }
 
-                if(!player.isOnGround() && player.getAbilities().flying && player.getY() <= player.yOld && !Minecraft.getInstance().options.keyJump.isDown()){
+                if(!player.isOnGround() && player.getAbilities().flying && player.getY() <= player.yOld && player.level.isClientSide){
 
-                    Vec3 vec = new Vec3(0d, -0.1d, 0d);
-                    player.move(MoverType.PLAYER, vec);
+                    if(!Minecraft.getInstance().options.keyJump.isDown()){
+
+                        Vec3 vec = new Vec3(0d, -0.1d, 0d);
+                        player.move(MoverType.SELF, vec);
+
+                    }
 
                 } else if(player.isOnGround()){
 
@@ -83,9 +87,9 @@ public class Events {
         double distance = event.getDistance();
         Player player = event.getPlayer();
 
-        if (distance >= 3 && !player.isCreative() && player.hasEffect(Effects.FLIGHT.get())){
+        if(distance > 3.0f && !player.isCreative() && player.hasEffect(Effects.FLIGHT.get())) {
 
-            float damage = (float)Math.floor(distance) - 2;
+            float damage = (float)Math.floor(distance) - 2.0f;
             player.hurt(DamageSource.FALL, damage);
 
         }
