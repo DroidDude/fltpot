@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "fltpot:ore_strange_dust_small",
+    "fltpot:ore_strange_dust_burried"
+  ],
+  "step": "underground_ores"
+}

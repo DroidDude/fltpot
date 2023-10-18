@@ -31,6 +31,9 @@
 	"item.minecraft.tipped_arrow.long_flight_potion": "Flugtronk",
 	
 	//Effects
-	"effect.fltpot.flight_effect": "Flug"
+	"effect.fltpot.flight_effect": "Flug",
+
+	//Creative Tab
+	"itemGroup.flight_potion_tab": "Flight Potion"
 	
 }

@@ -1,11 +1,10 @@
-package eu.newaustrianservers.fltpot.event;
+package com.github.DroidDude.fltpot.event;
 
-import eu.newaustrianservers.fltpot.effect.Effects;
+import com.github.DroidDude.fltpot.effect.Effects;
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.MoverType;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.TickEvent;
@@ -37,12 +36,16 @@ public class Events {
 
                 }
 
-                if(!player.isOnGround() && player.getAbilities().flying && player.getY() <= player.yOld && !Minecraft.getInstance().options.keyJump.isDown()){
+                if(!player.onGround() && player.getAbilities().flying && player.getY() <= player.yOld && player.level().isClientSide){
 
-                    Vec3 vec = new Vec3(0d, -0.1d, 0d);
-                    player.move(MoverType.PLAYER, vec);
+                    if(!Minecraft.getInstance().options.keyJump.isDown()){
+                        Vec3 vec = new Vec3(0d, -0.1d, 0d);
+                        player.move(MoverType.SELF, vec);
+                    }
 
-                } else if(player.isOnGround()){
+
+
+                } else if(player.onGround()){
 
                     player.getAbilities().flying = false;
                     player.onUpdateAbilities();
@@ -65,7 +68,7 @@ public class Events {
     @SubscribeEvent
     public static void addNBTData(PlayerEvent.PlayerLoggedInEvent event){
 
-        Player player = event.getPlayer();
+        Player player = event.getEntity();
         CompoundTag tag = player.getPersistentData();
         Tag modeTag = tag.get("wasFlying");
 
@@ -81,15 +84,17 @@ public class Events {
     public static void fallDamageFlightPotion(PlayerFlyableFallEvent event) {
 
         double distance = event.getDistance();
-        Player player = event.getPlayer();
+        Player player = event.getEntity();
 
-        if (distance >= 3 && !player.isCreative() && player.hasEffect(Effects.FLIGHT.get())){
+        if (distance > 3.0f && !player.isCreative() && player.hasEffect(Effects.FLIGHT.get())) {
 
-            float damage = (float)Math.floor(distance) - 2;
-            player.hurt(DamageSource.FALL, damage);
+            float damage = (float) Math.floor(distance) - 2;
+            player.hurt(player.damageSources().fall(), damage);
 
         }
 
     }
 
 }
+
+

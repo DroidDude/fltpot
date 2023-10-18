@@ -1,12 +1,12 @@
-package eu.newaustrianservers.fltpot.effect;
+package com.github.DroidDude.fltpot.effect;
 
-import eu.newaustrianservers.fltpot.Main;
+import com.github.DroidDude.fltpot.Main;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class Effects extends MobEffects {
 

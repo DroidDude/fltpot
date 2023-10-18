@@ -1,22 +1,10 @@
-package eu.newaustrianservers.fltpot;
+package com.github.DroidDude.fltpot;
 
-import eu.newaustrianservers.fltpot.block.Blocks;
-import eu.newaustrianservers.fltpot.effect.Effects;
-import eu.newaustrianservers.fltpot.item.Items;
-import eu.newaustrianservers.fltpot.potion.Potions;
-import eu.newaustrianservers.fltpot.world.OreFeatures;
-import net.minecraft.data.worldgen.SurfaceBuilders;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.BiomeGenerationSettings;
-import net.minecraft.world.level.biome.Biomes;
-import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.OreFeature;
-import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import com.github.DroidDude.fltpot.block.Blocks;
+import com.github.DroidDude.fltpot.creativetab.CreativeTab;
+import com.github.DroidDude.fltpot.effect.Effects;
+import com.github.DroidDude.fltpot.item.Items;
+import com.github.DroidDude.fltpot.potion.Potions;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -41,6 +29,8 @@ public class Main{
         LOGGER.info("Registered Items.");
         Blocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         LOGGER.info("Registered Blocks.");
+        CreativeTab.TABS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        LOGGER.info("Registered Creative Tabs.");
 
     }
 
@@ -50,4 +40,5 @@ public class Main{
         LOGGER.info("Setup method registered.");
 
     }
+
 }
