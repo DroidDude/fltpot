@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "fltpot:strange_dust"
+    },
+    "title": {
+      "translate": "advancements.fltpot.get_strange_dust.title"
+    },
+    "description": {
+      "translate": "advancements.fltpot.get_strange_dust.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "fltpot:fltpot/root",
+  "criteria": {
+    "get_strange_dust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fltpot:strange_dust"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_strange_dust"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

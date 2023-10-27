@@ -10,9 +10,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class Effects extends MobEffects {
 
-    public static final DeferredRegister<MobEffect> EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, Main.MODID);
+    public static final DeferredRegister<MobEffect> EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, Main.MOD_ID);
 
-    public static final RegistryObject<MobEffect> FLIGHT = EFFECTS.register("flight_effect", () -> new Flight(MobEffectCategory.BENEFICIAL, 0xd9fffb));
+    public static final RegistryObject<MobEffect> FLIGHT = EFFECTS.register("flight_effect", () -> new Flight(MobEffectCategory.BENEFICIAL, 0x81fcba));
 
     public static class Flight extends MobEffect{
 

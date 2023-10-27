@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:splash_potion",
+      "nbt": "{CustomPotionColor:13565951}"
+    },
+    "title": {
+      "translate": "advancements.fltpot.kill_levitating.title"
+    },
+    "description": {
+      "translate": "advancements.fltpot.kill_levitating.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "fltpot:fltpot/brew_flight_potion",
+  "criteria": {
+    "killed_something": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "effects": {
+            "minecraft:levitation": {}
+          }
+        },
+        "killing_blow": {}
+      }
+    }
+  },
+  "requirements": [
+    [
+      "killed_something"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

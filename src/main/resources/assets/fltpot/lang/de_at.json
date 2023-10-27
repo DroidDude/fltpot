@@ -1,10 +1,12 @@
 {
 	//Items
 	"item.fltpot.strange_dust": "Eignortiga Stab",
-	"item.fltpot.magic_powder": "Magischs Puiver",
+	"item.fltpot.magic_powder": "Magischs Puiva",
 	"item.fltpot.magic_nugget": "Magischa Klumpn",
 	"item.fltpot.magic_ingot": "Magischa Borrn",
-	
+
+	//Wearables
+    "item.fltpot.wings": "Flügl",
 
 	//Blocks
 	"block.fltpot.strange_dust_ore": "Eigenortiges Mineral",
@@ -15,8 +17,8 @@
 	"item.minecraft.potion.effect.long_flight_potion": "Tronk des Fluges",
 	"item.minecraft.splash_potion.effect.flight_potion": "Wurftronk des Fluges",
 	"item.minecraft.splash_potion.effect.long_flight_potion": "Wurftronk des Fluges",
-	"item.minecraft.lingering_potion.effect.flight_potion": "Verweiltronk des Flugest",
-	"item.minecraft.lingering_potion.effect.long_flight_potion": "Verweiltronk des Flugest",
+	"item.minecraft.lingering_potion.effect.flight_potion": "Verweiltronk des Fluges",
+	"item.minecraft.lingering_potion.effect.long_flight_potion": "Verweiltronk des Fluges",
 	"item.minecraft.potion.flight_potion": "Flugtronk",
 	"item.minecraft.potion.long_flight_potion": "Flugtronk",
 	"item.minecraft.splash_effect.flight_potion": "Flugtronk",
@@ -34,6 +36,22 @@
 	"effect.fltpot.flight_effect": "Flug",
 
 	//Creative Tab
-	"itemGroup.flight_potion_tab": "Flight Potion"
+	"itemGroup.flight_potion_tab": "Flight Potion",
+
+    //Advancements
+	"advancements.fltpot.root.title": "Nu a Abnteuer",
+	"advancements.fltpot.root.description": "Es könnte si do eppas Eignortiges vasteckn.",
+	"advancements.fltpot.get_strange_dust.title": "Is es net Eignortig?",
+	"advancements.fltpot.get_strange_dust.description": "Entdeck und bau Eignortige Mineral o",
+	"advancements.fltpot.craft_magic_powder.title": "Magischs Puiva is in da Luft",
+	"advancements.fltpot.craft_magic_powder.description": "Stö Magische Puiva hea",
+	"advancements.fltpot.brew_flight_potion.title": "A Tronk, dea di fliagn losst?",
+	"advancements.fltpot.brew_flight_potion.description": "Brau an Tronk des Fluges",
+	"advancements.fltpot.smelt_magic_nugget.title": "Magische Legierung",
+	"advancements.fltpot.smelt_magic_nugget.description": "Schmöz Magischs Puiva zu Magische Klumpn, stö noa an Magischn Borrn hea",
+	"advancements.fltpot.craft_wings.title": "Es verleiht Flügel",
+	"advancements.fltpot.craft_wings.description": "Vabessa Elytra und ziach deine Flügel u",
+	"advancements.fltpot.flight.title": "Ausgebildeta Pilot",
+	"advancements.fltpot.flight.description": "Fliag fia insgesomt oan Tog"
 	
 }

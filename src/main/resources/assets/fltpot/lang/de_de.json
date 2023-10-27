@@ -4,7 +4,9 @@
 	"item.fltpot.magic_powder": "Magisches Pulver",
 	"item.fltpot.magic_nugget": "Magischer Klumpen",
 	"item.fltpot.magic_ingot": "Magischer Barren",
-	
+
+	//Wearables
+    "item.fltpot.wings": "Flügel",
 
 	//Blocks
 	"block.fltpot.strange_dust_ore": "Eigenartiges Mineral",
@@ -15,8 +17,8 @@
 	"item.minecraft.potion.effect.long_flight_potion": "Trank des Fluges",
 	"item.minecraft.splash_potion.effect.flight_potion": "Wurftrank des Fluges",
 	"item.minecraft.splash_potion.effect.long_flight_potion": "Wurftrank des Fluges",
-	"item.minecraft.lingering_potion.effect.flight_potion": "Verweiltrank des Flugest",
-	"item.minecraft.lingering_potion.effect.long_flight_potion": "Verweiltrank des Flugest",
+	"item.minecraft.lingering_potion.effect.flight_potion": "Verweiltrank des Fluges",
+	"item.minecraft.lingering_potion.effect.long_flight_potion": "Verweiltrank des Fluges",
 	"item.minecraft.potion.flight_potion": "Flugtrank",
 	"item.minecraft.potion.long_flight_potion": "Flugtrank",
 	"item.minecraft.splash_effect.flight_potion": "Flugtrank",
@@ -34,6 +36,22 @@
 	"effect.fltpot.flight_effect": "Flug",
 
     //Creative Tab
-    "itemGroup.flight_potion_tab": "Flight Potion"
+    "itemGroup.flight_potion_tab": "Flight Potion",
+
+    //Advancements
+	"advancements.fltpot.root.title": "Ein weiteres Abenteuer",
+	"advancements.fltpot.root.description": "Es könnte sich hier etwas Eigenartiges verstecken",
+	"advancements.fltpot.get_strange_dust.title": "Ist es nicht Eigenartig?",
+	"advancements.fltpot.get_strange_dust.description": "Entdecke und baue Eigenartiges Mineral ab",
+	"advancements.fltpot.craft_magic_powder.title": "Magisches Pulver ist in der Luft",
+	"advancements.fltpot.craft_magic_powder.description": "Stelle Magisches Pulver her",
+	"advancements.fltpot.brew_flight_potion.title": "Ein Trank, der dich fliegen lässt?",
+	"advancements.fltpot.brew_flight_potion.description": "Braue einen Trank des Fluges",
+	"advancements.fltpot.smelt_magic_nugget.title": "Magische Legierung",
+	"advancements.fltpot.smelt_magic_nugget.description": "Schmelze Magisches Pulver zu Magische Klumpen, stelle dann einen Magischen Barren her",
+	"advancements.fltpot.craft_wings.title": "Es verleiht Flügel",
+	"advancements.fltpot.craft_wings.description": "Verbessere Elytra und zieh deine Flügel an",
+	"advancements.fltpot.flight.title": "Ausgebildeter Pilot",
+	"advancements.fltpot.flight.description": "Fliege für insgesamt einen Tag"
 	
 }

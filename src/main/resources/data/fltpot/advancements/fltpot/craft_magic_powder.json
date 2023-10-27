@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "fltpot:magic_powder"
+    },
+    "title": {
+      "translate": "advancements.fltpot.craft_magic_powder.title"
+    },
+    "description": {
+      "translate": "advancements.fltpot.craft_magic_powder.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "fltpot:fltpot/get_strange_dust",
+  "criteria": {
+    "craft_magic_powder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fltpot:magic_powder"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "craft_magic_powder"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

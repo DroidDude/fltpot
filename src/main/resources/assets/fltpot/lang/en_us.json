@@ -4,7 +4,9 @@
 	"item.fltpot.magic_powder": "Magic Powder",
 	"item.fltpot.magic_nugget": "Magic Nugget",
 	"item.fltpot.magic_ingot": "Magic Ingot",
-	
+
+	//Wearables
+	"item.fltpot.wings": "Wings",
 
 	//Blocks
 	"block.fltpot.strange_dust_ore": "Strange Dust Ore",
@@ -34,6 +36,22 @@
 	"effect.fltpot.flight_effect": "Flight",
 
 	//Creative Tab
-	"itemGroup.flight_potion_tab": "Flight Potion"
-	
+	"itemGroup.flight_potion_tab": "Flight Potion",
+
+	//Advancements
+	"advancements.fltpot.root.title": "Another Adventure",
+	"advancements.fltpot.root.description": "There might be something strange hidden down here",
+	"advancements.fltpot.get_strange_dust.title": "Isn't it strange?",
+	"advancements.fltpot.get_strange_dust.description": "Find and mine Strange Dust Ore",
+	"advancements.fltpot.craft_magic_powder.title": "Magic Powder is in the air",
+	"advancements.fltpot.craft_magic_powder.description": "Craft some Magic Powder",
+	"advancements.fltpot.brew_flight_potion.title": "A Potion that lets you fly?",
+	"advancements.fltpot.brew_flight_potion.description": "Brew a Potion of Flight",
+	"advancements.fltpot.smelt_magic_nugget.title": "Magical Alloy",
+	"advancements.fltpot.smelt_magic_nugget.description": "Smelt Magic Powder into Magic Nuggets, then craft a Magic Ingot",
+	"advancements.fltpot.craft_wings.title": "It gives you Wings",
+	"advancements.fltpot.craft_wings.description": "Upgrade Elytra and equip your Wings",
+	"advancements.fltpot.flight.title": "Trained pilot",
+	"advancements.fltpot.flight.description": "Fly for a total of one day"
+
 }

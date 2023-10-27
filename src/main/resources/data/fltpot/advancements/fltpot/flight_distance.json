@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "item": "fltpot:wings",
+      "nbt": "{Damage:431}"
+    },
+    "title": {
+      "translate": "advancements.fltpot.flight_distance.title"
+    },
+    "description": {
+      "translate": "advancements.fltpot.flight_distance.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "fltpot:fltpot/use_wings",
+  "criteria": {
+    "flown": {
+      "trigger": "fltpot:flight",
+      "conditions": {
+        "distance": {
+          "horizontal": {
+            "min": 5000
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "flown"
+    ]
+  ],
+  "rewards": {
+    "experience": 50
+  },
+  "sends_telemetry_event": true
+}

@@ -19,11 +19,11 @@ import javax.annotation.Nonnull;
 public class Potions extends net.minecraft.world.item.alchemy.Potions {
 
 
-    public static final DeferredRegister<Potion> POTIONS = DeferredRegister.create(ForgeRegistries.POTIONS, Main.MODID);
+    public static final DeferredRegister<Potion> POTIONS = DeferredRegister.create(ForgeRegistries.POTIONS, Main.MOD_ID);
 
     public static final RegistryObject<Potion> FLIGHT_POTION = POTIONS.register("flight_potion", () -> new Potion( new MobEffectInstance(Effects.FLIGHT.get(), 2400)));
     public static final RegistryObject<Potion> LONG_FLIGHT_POTION = POTIONS.register("long_flight_potion", () -> new Potion( new MobEffectInstance(Effects.FLIGHT.get(), 9600)));
-    public static final RegistryObject<Potion> LEVITATION_POTION = POTIONS.register("levitation", () -> new Potion( new MobEffectInstance(Effects.LEVITATION, 200)));
+    public static final RegistryObject<Potion> LEVITATION_POTION = POTIONS.register("levitation", () -> new Potion( new MobEffectInstance(Effects.LEVITATION, 400)));
 
 
     public static void addBrewingRecipe() {
@@ -44,12 +44,14 @@ public class Potions extends net.minecraft.world.item.alchemy.Potions {
         public FlightPotion(@Nonnull Ingredient start, @Nonnull Ingredient input, @Nonnull ItemStack output) {
 
             super(INPUT, REAGENT, OUTPUT);
+
         }
 
         @Override
         public boolean isInput(@Nonnull ItemStack stack) {
 
             return PotionUtils.getPotion(stack) == Potions.AWKWARD;
+
         }
 
         @Nonnull
@@ -58,7 +60,9 @@ public class Potions extends net.minecraft.world.item.alchemy.Potions {
         {
             if (isInput(input) && isIngredient(ingredient)) return PotionUtils.setPotion(new ItemStack(input.getItem()), FLIGHT_POTION.get());
             return ItemStack.EMPTY;
+
         }
+
     }
 
 
@@ -71,6 +75,7 @@ public class Potions extends net.minecraft.world.item.alchemy.Potions {
         public LongFlightPotion(@Nonnull Ingredient start, @Nonnull Ingredient input, @Nonnull ItemStack output) {
 
             super(INPUT, REAGENT, OUTPUT);
+
         }
 
         @Override
@@ -85,7 +90,9 @@ public class Potions extends net.minecraft.world.item.alchemy.Potions {
         {
             if (isInput(input) && isIngredient(ingredient)) return PotionUtils.setPotion(new ItemStack(input.getItem()), LONG_FLIGHT_POTION.get());
             return ItemStack.EMPTY;
+
         }
+
     }
 
 
@@ -98,12 +105,14 @@ public class Potions extends net.minecraft.world.item.alchemy.Potions {
         public LevitationPotion(@Nonnull Ingredient start, @Nonnull Ingredient input, @Nonnull ItemStack output) {
 
             super(INPUT, REAGENT, OUTPUT);
+
         }
 
         @Override
         public boolean isInput(@Nonnull ItemStack stack) {
 
             return PotionUtils.getPotion(stack) == Potions.FLIGHT_POTION.get();
+
         }
 
         @Nonnull
@@ -112,6 +121,9 @@ public class Potions extends net.minecraft.world.item.alchemy.Potions {
         {
             if (isInput(input) && isIngredient(ingredient)) return PotionUtils.setPotion(new ItemStack(input.getItem()), LEVITATION_POTION.get());
             return ItemStack.EMPTY;
+
         }
+
     }
+
 }

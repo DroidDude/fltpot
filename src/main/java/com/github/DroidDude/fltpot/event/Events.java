@@ -1,11 +1,17 @@
 package com.github.DroidDude.fltpot.event;
 
+import com.github.DroidDude.fltpot.advancements.CriteriaTriggers;
 import com.github.DroidDude.fltpot.effect.Effects;
+import com.github.DroidDude.fltpot.item.Items;
+import com.github.DroidDude.fltpot.item.WingsItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.Tag;
-import net.minecraft.world.entity.*;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MoverType;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -17,16 +23,45 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber
 public class Events {
 
+    private static final EquipmentSlot chest = EquipmentSlot.CHEST;
+
+
+    private static boolean equipped(LivingEntity player, EquipmentSlot slot, Item item) {
+
+        return item == player.getItemBySlot(slot).getItem();
+
+    }
+
+    public static boolean canFly(LivingEntity player, EquipmentSlot slot) {
+
+        Item item = player.getItemBySlot(slot).getItem();
+
+        if (item instanceof WingsItem) return ((WingsItem) item).canWingsFly(player.getItemBySlot(slot), player);
+
+        return false;
+
+    }
+
+    private static Vec3 toVec3(String input) {
+
+        input = input.substring(2, input.length() - 2).replace(" ", "");
+        String[] vecString = input.split(",");
+        return new Vec3(Double.parseDouble(vecString[0]), Double.parseDouble(vecString[1]), Double.parseDouble(vecString[2]));
+
+    }
+
+
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void doFlying(TickEvent.PlayerTickEvent event){
 
+        Item wings = Items.WINGS.get();
         Player player = event.player;
         CompoundTag tag = player.getPersistentData();
         boolean wasFlying = tag.getBoolean("wasFlying");
 
         if(!player.isCreative() && !player.isSpectator()){
 
-            if(player.hasEffect(Effects.FLIGHT.get()) && !player.hasEffect(Effects.LEVITATION)){
+            if((player.hasEffect(Effects.FLIGHT.get()) || equipped(player, chest, wings) && canFly(player, chest)) && !player.hasEffect(Effects.LEVITATION)){
 
                 if(!player.getAbilities().mayfly){
 
@@ -36,23 +71,21 @@ public class Events {
 
                 }
 
-                if(!player.onGround() && player.getAbilities().flying && player.getY() <= player.yOld && player.level().isClientSide){
+                if((!player.onGround() || !player.isInWaterOrBubble() && equipped(player, chest, wings)) && player.getAbilities().flying && player.getY() <= player.yOld && player.level().isClientSide){
 
                     if(!Minecraft.getInstance().options.keyJump.isDown()){
                         Vec3 vec = new Vec3(0d, -0.1d, 0d);
                         player.move(MoverType.SELF, vec);
                     }
 
-
-
-                } else if(player.onGround()){
+                } else if((player.onGround() || player.isInWaterOrBubble() && equipped(player, chest, wings))){
 
                     player.getAbilities().flying = false;
                     player.onUpdateAbilities();
 
                 }
 
-            } else if(wasFlying && !player.hasEffect(Effects.FLIGHT.get()) || player.hasEffect(Effects.LEVITATION)){
+            } else if(wasFlying && (!player.hasEffect(Effects.FLIGHT.get()) || !equipped(player, chest, wings) || !canFly(player, chest) || player.hasEffect(Effects.LEVITATION))) {
 
                 player.getAbilities().mayfly = false;
                 player.getAbilities().flying = false;
@@ -70,11 +103,16 @@ public class Events {
 
         Player player = event.getEntity();
         CompoundTag tag = player.getPersistentData();
-        Tag modeTag = tag.get("wasFlying");
 
-        if(modeTag == null){
+        if (tag.get("wasFlying") == null) {
 
             tag.putBoolean("wasFlying", false);
+
+        }
+
+        if (tag.get("flightTicks") == null) {
+
+            tag.putInt("flightTicks", 0);
 
         }
 
@@ -83,13 +121,45 @@ public class Events {
     @SubscribeEvent
     public static void fallDamageFlightPotion(PlayerFlyableFallEvent event) {
 
+        Item wings = Items.WINGS.get();
         double distance = event.getDistance();
         Player player = event.getEntity();
 
-        if (distance > 3.0f && !player.isCreative() && player.hasEffect(Effects.FLIGHT.get())) {
+        if (distance > 3.0f && !player.isCreative() && (player.hasEffect(Effects.FLIGHT.get()) || equipped(player, chest, wings) && canFly(player, chest))) {
 
-            float damage = (float) Math.floor(distance) - 2;
+            float damage = (float) Math.floor(distance) - 2.0f;
             player.hurt(player.damageSources().fall(), damage);
+
+        }
+
+    }
+
+    @SubscribeEvent
+    public static void flightCheck(TickEvent.PlayerTickEvent event) {
+
+        Player player = event.player;
+        CompoundTag tag = player.getPersistentData();
+
+        if (player.isCreative() || player.isSpectator()) return;
+
+        if(tag.get("flightStartPos") == null && player.getAbilities().flying) {
+
+            tag.putString("flightStartPos", player.position().toString());
+            tag.putInt("flightTicks", tag.getInt("flightTicks")+1);
+
+        } else if (!player.getAbilities().flying) {
+
+            tag.remove("flightStartPos");
+
+        } else if (player.getAbilities().flying) {
+
+            tag.putInt("flightTicks", tag.getInt("flightTicks")+1);
+
+        }
+
+        if (tag.get("flightStartPos") != null && player instanceof ServerPlayer serverPlayer) {
+
+            CriteriaTriggers.FLIGHT.trigger(serverPlayer, toVec3(tag.get("flightStartPos").toString()), tag.getInt("flightTicks"));
 
         }
 

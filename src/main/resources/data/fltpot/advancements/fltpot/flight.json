@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "fltpot:wings",
+      "nbt": "{Damage:431}"
+    },
+    "title": {
+      "translate": "advancements.fltpot.flight.title"
+    },
+    "description": {
+      "translate": "advancements.fltpot.flight.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "fltpot:fltpot/use_wings",
+  "criteria": {
+    "flight": {
+      "trigger": "fltpot:flight",
+      "conditions": {
+        "duration": 24000
+      }
+    }
+  },
+  "requirements": [
+    [
+      "flight"
+    ]
+  ],
+  "rewards": {
+    "experience": 50
+  },
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "item": "fltpot:wings"
+    },
+    "title": {
+      "translate": "advancements.fltpot.root.title"
+    },
+    "description": {
+      "translate": "advancements.fltpot.root.description"
+    },
+    "background": "fltpot:textures/gui/advancements/backgrounds/deepslate.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "below_zero": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "stepping_on": {
+            "block": {
+              "blocks": [
+                "minecraft:deepslate"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "below_zero"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

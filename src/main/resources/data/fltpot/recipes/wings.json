@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "#A#",
+        "#W#",
+        "# #"
+    ],
+    "key":
+    {
+        "#":
+        {
+            "item": "fltpot:magic_ingot"
+        },
+        "A":
+        {
+            "item": "minecraft:nether_star"
+        },
+        "W":
+        {
+            "item": "minecraft:elytra"
+        }
+    },
+    "result":
+    {
+        "item": "fltpot:wings",
+        "count": 1
+    }
+}
