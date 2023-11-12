@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.DispenserBlock;
 
 public class WingsItem extends Item implements Equipable {
 
-    public WingsItem(Item.Properties properties) {
+    public WingsItem(Properties properties) {
 
         super(properties);
 
@@ -50,7 +50,7 @@ public class WingsItem extends Item implements Equipable {
 
                 if (nextFlightTick % 20 == 0) {
 
-                    stack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(net.minecraft.world.entity.EquipmentSlot.CHEST));
+                    stack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(EquipmentSlot.CHEST));
 
                 }
 

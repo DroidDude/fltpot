@@ -4,6 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.layers.CapeLayer;
+import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.PlayerModelPart;
 import net.minecraft.world.item.ItemStack;
@@ -23,10 +24,13 @@ public abstract class CapeLayerMixin {
     )
     private void onRender(PoseStack pMatrixStack, MultiBufferSource pBuffer, int pPackedLight, AbstractClientPlayer pLivingEntity, float pLimbSwing, float pLimbSwingAmount, float pPartialTicks, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch, CallbackInfo ci) {
 
-        if (pLivingEntity.isCapeLoaded() && !pLivingEntity.isInvisible() && pLivingEntity.isModelPartShown(PlayerModelPart.CAPE) && pLivingEntity.getCloakTextureLocation() != null) {
-            ItemStack itemstack = pLivingEntity.getItemBySlot(EquipmentSlot.CHEST);
-            if (itemstack.is(Items.ELYTRA) || itemstack.is(com.github.DroidDude.fltpot.item.Items.WINGS.get())) {
-                ci.cancel();
+        if (!pLivingEntity.isInvisible() && pLivingEntity.isModelPartShown(PlayerModelPart.CAPE)) {
+            PlayerSkin playerskin = pLivingEntity.getSkin();
+            if (playerskin.capeTexture() != null) {
+                ItemStack itemstack = pLivingEntity.getItemBySlot(EquipmentSlot.CHEST);
+                if (itemstack.is(Items.ELYTRA) || itemstack.is(com.github.DroidDude.fltpot.item.Items.WINGS.get())) {
+                    ci.cancel();
+                }
             }
         }
     }

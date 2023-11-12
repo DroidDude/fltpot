@@ -44,6 +44,7 @@ public class Events {
 
     private static Vec3 toVec3(String input) {
 
+
         input = input.substring(2, input.length() - 2).replace(" ", "");
         String[] vecString = input.split(",");
         return new Vec3(Double.parseDouble(vecString[0]), Double.parseDouble(vecString[1]), Double.parseDouble(vecString[2]));
@@ -133,6 +134,7 @@ public class Events {
         }
 
     }
+
 
     @SubscribeEvent
     public static void flightCheck(TickEvent.PlayerTickEvent event) {

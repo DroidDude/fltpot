@@ -8,6 +8,7 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -49,12 +50,16 @@ public class WingsModel<T extends LivingEntity> extends AgeableListModel<T> {
     @Override
     public void setupAnim(T pEntity, float pLimbSwing, float pLimbSwingAmount, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
 
+        Player player;
+
+        if(pEntity instanceof Player player1) player = player1; else return;
+
         float f = 0.2617994F;
         float f1 = -0.2617994F;
         float f2 = 0.0F;
         float f3 = 0.0F;
 
-        if (!pEntity.onGround() && !pEntity.hasEffect(Effects.LEVITATION) && !pEntity.isPassenger() && !pEntity.isInWaterOrBubble()) {
+        if (player.getAbilities().flying && !pEntity.hasEffect(Effects.LEVITATION) && !pEntity.isPassenger() && !pEntity.isInWaterOrBubble()) {
 
             float f4 = 1.0F;
             Vec3 vec3 = pEntity.getDeltaMovement();
@@ -70,7 +75,7 @@ public class WingsModel<T extends LivingEntity> extends AgeableListModel<T> {
             f = f4 * 0.34906584F + (1.0F - f4) * f;
             f1 = f4 * (-(float)Math.PI / 2F) + (1.0F - f4) * f1;
 
-        } else if (pEntity.isCrouching() || !pEntity.onGround() && !pEntity.hasEffect(Effects.LEVITATION) && !pEntity.isPassenger() && !pEntity.isInWaterOrBubble()) {
+        } else if (pEntity.isCrouching() || player.getAbilities().flying && !pEntity.hasEffect(Effects.LEVITATION) && !pEntity.isPassenger() && !pEntity.isInWaterOrBubble()) {
 
             f = 0.6981317F;
             f1 = (-(float)Math.PI / 4F);

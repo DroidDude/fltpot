@@ -2,25 +2,27 @@ package com.github.DroidDude.fltpot.advancements;
 
 import com.github.DroidDude.fltpot.Main;
 import com.google.gson.JsonObject;
+import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.phys.Vec3;
 
+import java.util.Optional;
+
 public class FlightTrigger extends SimpleCriterionTrigger<FlightTrigger.TriggerInstance> {
     static final ResourceLocation ID = new ResourceLocation(Main.MOD_ID, "flight");
 
-    @Override
     public ResourceLocation getId() {
         return ID;
     }
 
     @Override
-    public FlightTrigger.TriggerInstance createInstance(JsonObject pJson, ContextAwarePredicate pPredicate, DeserializationContext pDeserializationContext) {
+    public TriggerInstance createInstance(JsonObject pJson, Optional<ContextAwarePredicate> pPlayer, DeserializationContext pDeserializationContext) {
 
-        DistancePredicate distancepredicate = DistancePredicate.fromJson(pJson.get("distance"));
+        Optional<DistancePredicate> distancepredicate = DistancePredicate.fromJson(pJson.get("distance"));
         MinMaxBounds.Ints minmaxbounds$ints = MinMaxBounds.Ints.fromJson(pJson.get("duration"));
-        return new FlightTrigger.TriggerInstance(pPredicate, distancepredicate, minmaxbounds$ints);
+        return new TriggerInstance(pPlayer, distancepredicate, minmaxbounds$ints);
 
     }
 
@@ -32,26 +34,26 @@ public class FlightTrigger extends SimpleCriterionTrigger<FlightTrigger.TriggerI
 
 
     public static class TriggerInstance extends AbstractCriterionTriggerInstance {
-        private final DistancePredicate distance;
+        private final Optional<DistancePredicate> distance;
         private final MinMaxBounds.Ints duration;
 
-        public TriggerInstance(ContextAwarePredicate pPlayer, DistancePredicate pDistance, MinMaxBounds.Ints pDuration) {
+        public TriggerInstance(Optional<ContextAwarePredicate> pPlayer, Optional<DistancePredicate> pDistance, MinMaxBounds.Ints pDuration) {
 
-            super(FlightTrigger.ID, pPlayer);
+            super(pPlayer);
             this.distance = pDistance;
             this.duration = pDuration;
 
         }
 
-        public static FlightTrigger.TriggerInstance flown(DistancePredicate pDistance) {
+        public static Criterion<TriggerInstance> flown(DistancePredicate pDistance) {
 
-            return new FlightTrigger.TriggerInstance(ContextAwarePredicate.ANY, pDistance, MinMaxBounds.Ints.ANY);
+            return CriteriaTriggers.FLIGHT.createCriterion(new TriggerInstance(Optional.empty(), Optional.of(pDistance), MinMaxBounds.Ints.ANY));
 
         }
 
         public boolean matches(ServerPlayer pPlayer, Vec3 pStartPos, int pDuration) {
 
-            if (!this.distance.matches(pStartPos.x, pStartPos.y, pStartPos.z, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ())) {
+            if (this.distance.isPresent() && !this.distance.get().matches(pStartPos.x, pStartPos.y, pStartPos.z, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ())) {
 
                 return false;
 
@@ -64,13 +66,13 @@ public class FlightTrigger extends SimpleCriterionTrigger<FlightTrigger.TriggerI
         }
 
         @Override
-        public JsonObject serializeToJson(SerializationContext pConditions) {
-
-            JsonObject jsonobject = super.serializeToJson(pConditions);
-            jsonobject.add("distance", this.distance.serializeToJson());
+        public JsonObject serializeToJson() {
+            JsonObject jsonobject = super.serializeToJson();
+            this.distance.ifPresent((p_300145_) -> {
+                jsonobject.add("distance", p_300145_.serializeToJson());
+            });
             jsonobject.add("duration", this.duration.serializeToJson());
             return jsonobject;
-
         }
 
     }

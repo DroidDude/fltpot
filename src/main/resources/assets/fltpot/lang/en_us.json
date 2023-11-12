@@ -47,10 +47,14 @@
 	"advancements.fltpot.craft_magic_powder.description": "Craft some Magic Powder",
 	"advancements.fltpot.brew_flight_potion.title": "A Potion that lets you fly?",
 	"advancements.fltpot.brew_flight_potion.description": "Brew a Potion of Flight",
+	"advancements.fltpot.kill_levitating.title": "Flying target",
+	"advancements.fltpot.kill_levitating.description": "Kill a mob while it is levitating",
 	"advancements.fltpot.smelt_magic_nugget.title": "Magical Alloy",
 	"advancements.fltpot.smelt_magic_nugget.description": "Smelt Magic Powder into Magic Nuggets, then craft a Magic Ingot",
 	"advancements.fltpot.craft_wings.title": "It gives you Wings",
 	"advancements.fltpot.craft_wings.description": "Upgrade Elytra and equip your Wings",
+	"advancements.fltpot.flight_distance.title": "Far far away",
+	"advancements.fltpot.flight_distance.description": "Fly at least 5 km from where you started",
 	"advancements.fltpot.flight.title": "Trained pilot",
 	"advancements.fltpot.flight.description": "Fly for a total of one day"
 

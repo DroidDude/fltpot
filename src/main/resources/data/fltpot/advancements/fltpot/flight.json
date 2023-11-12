@@ -1,8 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "fltpot:wings",
-      "nbt": "{Damage:431}"
+      "item": "minecraft:clock"
     },
     "title": {
       "translate": "advancements.fltpot.flight.title"
@@ -15,12 +14,14 @@
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "fltpot:fltpot/use_wings",
+  "parent": "fltpot:fltpot/flight_distance",
   "criteria": {
     "flight": {
       "trigger": "fltpot:flight",
       "conditions": {
-        "duration": 24000
+        "duration": {
+        "min": 24000
+        }
       }
     }
   },
