@@ -1,5 +1,5 @@
 
-Flight Potion Beta 1.20.2-0.3.1
+Flight Potion Beta 1.20.4-0.3.1
 =======
 
 A Minecraft mod, that adds some features related to flight.
@@ -60,11 +60,9 @@ Custom Advancement Trigger FlightTrigger
 
 Change Logs:
 ============
-Beta 1.20.2-0.3.1
+Beta 1.20.4-0.3.1
 
-- New version for 1.20.2
-- Switched back to the latest Forge version
-- Minor Bug Fixing
+- New version for 1.20.4
 
 Licence:
 ============

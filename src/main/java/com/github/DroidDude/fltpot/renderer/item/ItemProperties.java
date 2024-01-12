@@ -1,7 +1,7 @@
-package com.github.DroidDude.fltpot.renderer.item;
+package com.github.droiddude.fltpot.renderer.item;
 
-import com.github.DroidDude.fltpot.item.Items;
-import com.github.DroidDude.fltpot.item.WingsItem;
+import com.github.droiddude.fltpot.item.Items;
+import com.github.droiddude.fltpot.item.WingsItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;

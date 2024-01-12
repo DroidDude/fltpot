@@ -1,53 +1,38 @@
-package com.github.DroidDude.fltpot.advancements;
+package com.github.droiddude.fltpot.advancements;
 
-import com.github.DroidDude.fltpot.Main;
-import com.google.gson.JsonObject;
+import com.github.droiddude.fltpot.Main;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.ExtraCodecs;
 import net.minecraft.world.phys.Vec3;
 
 import java.util.Optional;
 
 public class FlightTrigger extends SimpleCriterionTrigger<FlightTrigger.TriggerInstance> {
     static final ResourceLocation ID = new ResourceLocation(Main.MOD_ID, "flight");
-
-    public ResourceLocation getId() {
-        return ID;
-    }
-
-    @Override
-    public TriggerInstance createInstance(JsonObject pJson, Optional<ContextAwarePredicate> pPlayer, DeserializationContext pDeserializationContext) {
-
-        Optional<DistancePredicate> distancepredicate = DistancePredicate.fromJson(pJson.get("distance"));
-        MinMaxBounds.Ints minmaxbounds$ints = MinMaxBounds.Ints.fromJson(pJson.get("duration"));
-        return new TriggerInstance(pPlayer, distancepredicate, minmaxbounds$ints);
-
+    public Codec<FlightTrigger.TriggerInstance> codec() {
+        return FlightTrigger.TriggerInstance.CODEC;
     }
 
     public void trigger(ServerPlayer pPlayer, Vec3 pStartPos, int pDuration) {
-
-        this.trigger(pPlayer, (triggerInstance) -> triggerInstance.matches(pPlayer, pStartPos, pDuration));
-
+        this.trigger(pPlayer, (p_49124_) -> {
+            return p_49124_.matches(pPlayer, pStartPos, pDuration);
+        });
     }
 
 
-    public static class TriggerInstance extends AbstractCriterionTriggerInstance {
-        private final Optional<DistancePredicate> distance;
-        private final MinMaxBounds.Ints duration;
+    public static record TriggerInstance(Optional<ContextAwarePredicate> player, Optional<DistancePredicate> distance, MinMaxBounds.Ints duration) implements SimpleCriterionTrigger.SimpleInstance {
+        public static final Codec<FlightTrigger.TriggerInstance> CODEC = RecordCodecBuilder.create((parameter) -> {
+            return parameter.group(ExtraCodecs.strictOptionalField(EntityPredicate.ADVANCEMENT_CODEC, "player").forGetter(FlightTrigger.TriggerInstance::player), ExtraCodecs.strictOptionalField(DistancePredicate.CODEC, "distance").forGetter(FlightTrigger.TriggerInstance::distance), ExtraCodecs.strictOptionalField(MinMaxBounds.Ints.CODEC, "duration", MinMaxBounds.Ints.ANY).forGetter(FlightTrigger.TriggerInstance::duration)).apply(parameter, FlightTrigger.TriggerInstance::new);
+        });
 
-        public TriggerInstance(Optional<ContextAwarePredicate> pPlayer, Optional<DistancePredicate> pDistance, MinMaxBounds.Ints pDuration) {
+        public static Criterion<FlightTrigger.TriggerInstance> flown(DistancePredicate pDistance) {
 
-            super(pPlayer);
-            this.distance = pDistance;
-            this.duration = pDuration;
-
-        }
-
-        public static Criterion<TriggerInstance> flown(DistancePredicate pDistance) {
-
-            return CriteriaTriggers.FLIGHT.createCriterion(new TriggerInstance(Optional.empty(), Optional.of(pDistance), MinMaxBounds.Ints.ANY));
+            return CriteriaTriggers.FLIGHT.createCriterion(new FlightTrigger.TriggerInstance(Optional.empty(), Optional.of(pDistance), MinMaxBounds.Ints.ANY));
 
         }
 
@@ -63,16 +48,6 @@ public class FlightTrigger extends SimpleCriterionTrigger<FlightTrigger.TriggerI
 
             }
 
-        }
-
-        @Override
-        public JsonObject serializeToJson() {
-            JsonObject jsonobject = super.serializeToJson();
-            this.distance.ifPresent((p_300145_) -> {
-                jsonobject.add("distance", p_300145_.serializeToJson());
-            });
-            jsonobject.add("duration", this.duration.serializeToJson());
-            return jsonobject;
         }
 
     }

@@ -1,6 +1,4 @@
-package com.github.DroidDude.fltpot.advancements;
-
-import com.github.DroidDude.fltpot.Main;
+package com.github.droiddude.fltpot.advancements;
 
 public class CriteriaTriggers {
 

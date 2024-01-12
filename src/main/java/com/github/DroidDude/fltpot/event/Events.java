@@ -1,9 +1,9 @@
-package com.github.DroidDude.fltpot.event;
+package com.github.droiddude.fltpot.event;
 
-import com.github.DroidDude.fltpot.advancements.CriteriaTriggers;
-import com.github.DroidDude.fltpot.effect.Effects;
-import com.github.DroidDude.fltpot.item.Items;
-import com.github.DroidDude.fltpot.item.WingsItem;
+import com.github.droiddude.fltpot.advancements.CriteriaTriggers;
+import com.github.droiddude.fltpot.effect.Effects;
+import com.github.droiddude.fltpot.item.Items;
+import com.github.droiddude.fltpot.item.WingsItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;

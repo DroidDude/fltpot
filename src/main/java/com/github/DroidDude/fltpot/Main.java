@@ -1,14 +1,14 @@
-package com.github.DroidDude.fltpot;
+package com.github.droiddude.fltpot;
 
-import com.github.DroidDude.fltpot.advancements.CriteriaTriggers;
-import com.github.DroidDude.fltpot.block.Blocks;
-import com.github.DroidDude.fltpot.creativetab.CreativeTab;
-import com.github.DroidDude.fltpot.effect.Effects;
-import com.github.DroidDude.fltpot.item.Items;
-import com.github.DroidDude.fltpot.potion.Potions;
-import com.github.DroidDude.fltpot.registry.ModelLayerRegistry;
-import com.github.DroidDude.fltpot.renderer.entity.layers.WingsLayer;
-import com.github.DroidDude.fltpot.renderer.item.ItemProperties;
+import com.github.droiddude.fltpot.advancements.CriteriaTriggers;
+import com.github.droiddude.fltpot.block.Blocks;
+import com.github.droiddude.fltpot.creativetab.CreativeTab;
+import com.github.droiddude.fltpot.effect.Effects;
+import com.github.droiddude.fltpot.item.Items;
+import com.github.droiddude.fltpot.potion.Potions;
+import com.github.droiddude.fltpot.registry.ModelLayerRegistry;
+import com.github.droiddude.fltpot.renderer.entity.layers.WingsLayer;
+import com.github.droiddude.fltpot.renderer.item.ItemProperties;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
@@ -46,6 +46,9 @@ public class Main{
 
         }
 
+        CreativeTab.TABS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        LOGGER.info("Registered Creative Tabs.");
+
         Effects.EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
         LOGGER.info("Registered Effects.");
 
@@ -57,9 +60,6 @@ public class Main{
 
         Blocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         LOGGER.info("Registered Blocks.");
-
-        CreativeTab.TABS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        LOGGER.info("Registered Creative Tabs.");
 
     }
 
@@ -89,7 +89,7 @@ public class Main{
 
         event.getSkins().forEach(skin -> {
 
-            var renderer = event.getSkin(skin);
+            PlayerRenderer renderer = event.getPlayerSkin(skin);
 
             if (renderer != null) renderer.addLayer(new WingsLayer<>((RenderLayerParent) renderer, Minecraft.getInstance().getEntityModels()));
 

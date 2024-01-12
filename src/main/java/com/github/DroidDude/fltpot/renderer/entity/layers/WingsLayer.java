@@ -1,9 +1,9 @@
-package com.github.DroidDude.fltpot.renderer.entity.layers;
+package com.github.droiddude.fltpot.renderer.entity.layers;
 
-import com.github.DroidDude.fltpot.Main;
-import com.github.DroidDude.fltpot.item.Items;
-import com.github.DroidDude.fltpot.model.WingsModel;
-import com.github.DroidDude.fltpot.registry.ModelLayerRegistry;
+import com.github.droiddude.fltpot.Main;
+import com.github.droiddude.fltpot.item.Items;
+import com.github.droiddude.fltpot.model.WingsModel;
+import com.github.droiddude.fltpot.registry.ModelLayerRegistry;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.EntityModel;

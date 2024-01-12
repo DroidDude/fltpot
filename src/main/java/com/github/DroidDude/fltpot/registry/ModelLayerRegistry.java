@@ -1,7 +1,7 @@
-package com.github.DroidDude.fltpot.registry;
+package com.github.droiddude.fltpot.registry;
 
-import com.github.DroidDude.fltpot.Main;
-import com.github.DroidDude.fltpot.model.WingsModel;
+import com.github.droiddude.fltpot.Main;
+import com.github.droiddude.fltpot.model.WingsModel;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;

@@ -1,4 +1,4 @@
-package com.github.DroidDude.fltpot.mixin;
+package com.github.droiddude.fltpot.mixin;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.player.AbstractClientPlayer;
@@ -28,7 +28,7 @@ public abstract class CapeLayerMixin {
             PlayerSkin playerskin = pLivingEntity.getSkin();
             if (playerskin.capeTexture() != null) {
                 ItemStack itemstack = pLivingEntity.getItemBySlot(EquipmentSlot.CHEST);
-                if (itemstack.is(Items.ELYTRA) || itemstack.is(com.github.DroidDude.fltpot.item.Items.WINGS.get())) {
+                if (itemstack.is(Items.ELYTRA) || itemstack.is(com.github.droiddude.fltpot.item.Items.WINGS.get())) {
                     ci.cancel();
                 }
             }

@@ -1,6 +1,6 @@
-package com.github.DroidDude.fltpot.item;
+package com.github.droiddude.fltpot.item;
 
-import com.github.DroidDude.fltpot.effect.Effects;
+import com.github.droiddude.fltpot.effect.Effects;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.DispenserBlock;
 
 public class WingsItem extends Item implements Equipable {
 
-    public WingsItem(Properties properties) {
+    public WingsItem(Item.Properties properties) {
 
         super(properties);
 
@@ -50,7 +50,7 @@ public class WingsItem extends Item implements Equipable {
 
                 if (nextFlightTick % 20 == 0) {
 
-                    stack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(EquipmentSlot.CHEST));
+                    stack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(net.minecraft.world.entity.EquipmentSlot.CHEST));
 
                 }
 

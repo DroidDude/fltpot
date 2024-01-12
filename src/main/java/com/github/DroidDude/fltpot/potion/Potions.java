@@ -1,8 +1,8 @@
-package com.github.DroidDude.fltpot.potion;
+package com.github.droiddude.fltpot.potion;
 
-import com.github.DroidDude.fltpot.Main;
-import com.github.DroidDude.fltpot.effect.Effects;
-import com.github.DroidDude.fltpot.item.Items;
+import com.github.droiddude.fltpot.Main;
+import com.github.droiddude.fltpot.effect.Effects;
+import com.github.droiddude.fltpot.item.Items;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.alchemy.Potion;

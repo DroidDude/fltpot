@@ -1,6 +1,6 @@
-package com.github.DroidDude.fltpot.model;
+package com.github.droiddude.fltpot.model;
 
-import com.github.DroidDude.fltpot.effect.Effects;
+import com.github.droiddude.fltpot.effect.Effects;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.model.AgeableListModel;
 import net.minecraft.client.model.geom.ModelPart;

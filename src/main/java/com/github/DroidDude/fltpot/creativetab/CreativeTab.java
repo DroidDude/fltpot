@@ -1,8 +1,8 @@
-package com.github.DroidDude.fltpot.creativetab;
+package com.github.droiddude.fltpot.creativetab;
 
-import com.github.DroidDude.fltpot.Main;
-import com.github.DroidDude.fltpot.item.Items;
-import com.github.DroidDude.fltpot.potion.Potions;
+import com.github.droiddude.fltpot.Main;
+import com.github.droiddude.fltpot.item.Items;
+import com.github.droiddude.fltpot.potion.Potions;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -29,6 +29,7 @@ public class CreativeTab {
                     .title(Component.translatable("itemGroup.flight_potion_tab"))
                     .icon(Items.WINGS.get()::getDefaultInstance)
                     .displayItems((displayParameter, output) -> {
+
 
                         for (RegistryObject<Item> item : Items.ITEMS.getEntries()) {
                             output.accept(item.get().getDefaultInstance());

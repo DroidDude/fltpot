@@ -1,6 +1,6 @@
-package com.github.DroidDude.fltpot.effect;
+package com.github.droiddude.fltpot.effect;
 
-import com.github.DroidDude.fltpot.Main;
+import com.github.droiddude.fltpot.Main;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffects;

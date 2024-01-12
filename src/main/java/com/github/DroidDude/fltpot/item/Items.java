@@ -1,7 +1,7 @@
-package com.github.DroidDude.fltpot.item;
+package com.github.droiddude.fltpot.item;
 
-import com.github.DroidDude.fltpot.Main;
-import com.github.DroidDude.fltpot.block.Blocks;
+import com.github.droiddude.fltpot.Main;
+import com.github.droiddude.fltpot.block.Blocks;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
