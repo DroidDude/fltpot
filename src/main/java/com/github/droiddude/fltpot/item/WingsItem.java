@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.DispenserBlock;
 
 public class WingsItem extends Item implements Equipable {
 
-    public WingsItem(Item.Properties properties) {
+    public WingsItem(Properties properties) {
 
         super(properties);
 
@@ -29,7 +29,7 @@ public class WingsItem extends Item implements Equipable {
     }
 
     public boolean isValidRepairItem(ItemStack pStack, ItemStack pRepairCandidate) {
-        return pRepairCandidate.is(Items.MAGIC_INGOT.get());
+        return pRepairCandidate.is(com.github.droiddude.fltpot.item.Items.MAGIC_INGOT.get());
     }
 
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
@@ -50,7 +50,7 @@ public class WingsItem extends Item implements Equipable {
 
                 if (nextFlightTick % 20 == 0) {
 
-                    stack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(net.minecraft.world.entity.EquipmentSlot.CHEST));
+                    stack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(EquipmentSlot.CHEST));
 
                 }
 
@@ -79,6 +79,7 @@ public class WingsItem extends Item implements Equipable {
         if (this.canWingsFly(stack, player)) {
 
             if (player.getAbilities().flying && !player.isPassenger() && !player.hasEffect(Effects.LEVITATION)) tick++;
+            else tick = 0;
 
         } else tick = 0;
 
