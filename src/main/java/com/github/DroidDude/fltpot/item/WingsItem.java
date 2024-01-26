@@ -79,6 +79,7 @@ public class WingsItem extends Item implements Equipable {
         if (this.canWingsFly(stack, player)) {
 
             if (player.getAbilities().flying && !player.isPassenger() && !player.hasEffect(Effects.LEVITATION)) tick++;
+            else tick = 0;
 
         } else tick = 0;
 

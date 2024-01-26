@@ -1,5 +1,5 @@
 
-Flight Potion Beta 1.20.1-0.3.0
+Flight Potion Beta 1.20.1-0.3.2
 =======
 
 A Minecraft mod, that adds some features related to flight.
@@ -60,34 +60,17 @@ Custom Advancement Trigger FlightTrigger
 
 Change Logs:
 ============
-Beta 1.20.1-0.3.0
+Beta 1.20.1-0.3.2
 
-- Updated to latest NeoForge version
-- Added Wings Item
-- Added Wings Recipe Advancement
-- Added Loot to the Ancient City Loot Table
-- Added Loot to the End City Loot Table
-- Added Potion Variants to Creative Tab
-- Added Advancement Tree
-- Added Renderer System
-- Added Custom Flight Trigger
-- Added Mixins for Cape handling with Wings equipped
-- Changed Flight Effect color for better differentiation
-- Changed Levitation Potion duration to 400 ticks, 200 previously
-- Changed the mapping to ParchmentMC
-- Minor Bugfixes
-
-Beta 1.20.1-0.2.5
-
-- New Version for 1.20.1
-- Fixed bug, where players crashes when flying on a server
-- Added Custom Creative Tab
+- Updated to latest NeoForge version 47.1.96
+- Updated to latest ParchmentMC version 2023.09.03
+- Fixed [Issue #7](https://github.com/DroidDude/fltpot/issues/7)
 
 Licence:
 ============
 MIT License
 
-Copyright (c) 2023 DroidDude
+Copyright (c) 2024 DroidDude
 
 This license applies to the Minecraft mod files as supplied by github.com/DroidDude/fltpot/src
 
