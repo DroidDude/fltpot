@@ -3,7 +3,9 @@
   "ingredient": {
     "item": "fltpot:magic_powder"
   },
-  "result": "fltpot:magic_nugget",
+  "result": {
+    "id": "fltpot:magic_nugget"
+  },
   "experience": 0.7,
   "cookingtime": 200
 }

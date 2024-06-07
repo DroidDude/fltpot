@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "fltpot:wings"
+      "id": "fltpot:wings"
     },
     "title": {
       "translate": "advancements.fltpot.root.title"

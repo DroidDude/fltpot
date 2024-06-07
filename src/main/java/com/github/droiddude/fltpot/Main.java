@@ -15,10 +15,16 @@ import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
+import net.minecraft.world.item.alchemy.PotionBrewing;
+import net.minecraft.world.item.alchemy.PotionContents;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.ForgeHooksClient;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.common.brewing.BrewingRecipe;
+import net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -27,6 +33,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Map;
+
+import static net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent.*;
 
 @Mod(Main.MOD_ID)
 public class Main{
@@ -66,8 +74,8 @@ public class Main{
 
     private void setup(final FMLCommonSetupEvent event) {
 
-        Potions.addBrewingRecipe();
-        LOGGER.info("Added Brewing Recipes.");
+        /*Potions.addBrewingRecipe();
+        LOGGER.info("Added Brewing Recipes.");*/
 
         if (FMLEnvironment.dist == Dist.CLIENT) {
 
