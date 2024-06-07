@@ -1,11 +1,13 @@
 package com.github.droiddude.fltpot.item;
 
 import com.github.droiddude.fltpot.effect.Effects;
+import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Equipable;
@@ -16,7 +18,7 @@ import net.minecraft.world.level.block.DispenserBlock;
 
 public class WingsItem extends Item implements Equipable {
 
-    public WingsItem(Properties properties) {
+    public WingsItem(Item.Properties properties) {
 
         super(properties);
 
@@ -29,7 +31,7 @@ public class WingsItem extends Item implements Equipable {
     }
 
     public boolean isValidRepairItem(ItemStack pStack, ItemStack pRepairCandidate) {
-        return pRepairCandidate.is(com.github.droiddude.fltpot.item.Items.MAGIC_INGOT.get());
+        return pRepairCandidate.is(Items.MAGIC_INGOT.get());
     }
 
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
@@ -40,7 +42,7 @@ public class WingsItem extends Item implements Equipable {
         return WingsItem.isFlyEnabled(stack);
     }
 
-    public boolean wingsFlightTick(ItemStack stack, net.minecraft.world.entity.LivingEntity entity, int flightTicks) {
+    public boolean wingsFlightTick(ItemStack stack, LivingEntity entity, int flightTicks) {
 
         if (!entity.level().isClientSide) {
 
@@ -50,7 +52,7 @@ public class WingsItem extends Item implements Equipable {
 
                 if (nextFlightTick % 20 == 0) {
 
-                    stack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(EquipmentSlot.CHEST));
+                    stack.hurtAndBreak(1, entity, EquipmentSlot.CHEST);
 
                 }
 
@@ -62,7 +64,7 @@ public class WingsItem extends Item implements Equipable {
 
     }
 
-    public SoundEvent getEquipSound() {
+    public Holder<SoundEvent> getEquipSound() {
         return SoundEvents.ARMOR_EQUIP_ELYTRA;
     }
 

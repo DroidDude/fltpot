@@ -10,7 +10,7 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.alchemy.Potion;
-import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -36,19 +36,19 @@ public class CreativeTab {
                         }
 
                         for (RegistryObject<Potion> potion : Potions.POTIONS.getEntries()) {
-                            output.accept(PotionUtils.setPotion(new ItemStack(Items.POTION), potion.get()));
+                            output.accept(PotionContents.createItemStack(Items.POTION, potion.getHolder().get()));
                         }
 
                         for (RegistryObject<Potion> splashPotion : Potions.POTIONS.getEntries()) {
-                            output.accept(PotionUtils.setPotion(new ItemStack(Items.SPLASH_POTION), splashPotion.get()));
+                            output.accept(PotionContents.createItemStack(Items.SPLASH_POTION, splashPotion.getHolder().get()));
                         }
 
                         for (RegistryObject<Potion> lingeringPotion : Potions.POTIONS.getEntries()) {
-                            output.accept(PotionUtils.setPotion(new ItemStack(Items.LINGERING_POTION), lingeringPotion.get()));
+                            output.accept(PotionContents.createItemStack(Items.LINGERING_POTION, lingeringPotion.getHolder().get()));
                         }
 
                         for (RegistryObject<Potion> tippedArrow : Potions.POTIONS.getEntries()) {
-                            output.accept(PotionUtils.setPotion(new ItemStack(Items.TIPPED_ARROW), tippedArrow.get()));
+                            output.accept(PotionContents.createItemStack(Items.TIPPED_ARROW, tippedArrow.getHolder().get()));
                         }
 
                     })

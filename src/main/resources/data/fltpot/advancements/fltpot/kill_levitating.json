@@ -1,8 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:splash_potion",
-      "nbt": "{CustomPotionColor:13565951}"
+      "id": "minecraft:splash_potion",
+      "components": {
+        "minecraft:potion_contents": {
+            "potion": "fltpot:levitation",
+            "custom_color": 13565951
+            }
+        }
     },
     "title": {
       "translate": "advancements.fltpot.kill_levitating.title"

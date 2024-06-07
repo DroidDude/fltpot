@@ -24,6 +24,6 @@ public class Items extends net.minecraft.world.item.Items {
     public static final RegistryObject<Item> MAGIC_INGOT = ITEMS.register("magic_ingot", () -> new Item(new Item.Properties()));
 
     //wearables
-    public static final RegistryObject<Item> WINGS = ITEMS.register("wings", () -> new WingsItem((new Item.Properties().defaultDurability(432).rarity(Rarity.RARE))));
+    public static final RegistryObject<Item> WINGS = ITEMS.register("wings", () -> new WingsItem((new Item.Properties().durability(432).rarity(Rarity.RARE))));
 
 }

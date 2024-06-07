@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "fltpot:magic_ingot"
+      "id": "fltpot:magic_ingot"
     },
     "title": {
       "translate": "advancements.fltpot.smelt_magic_nugget.title"

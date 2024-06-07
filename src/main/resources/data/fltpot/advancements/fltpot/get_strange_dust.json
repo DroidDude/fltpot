@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "fltpot:strange_dust"
+      "id": "fltpot:strange_dust"
     },
     "title": {
       "translate": "advancements.fltpot.get_strange_dust.title"

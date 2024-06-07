@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "fltpot:magic_powder"
+      "id": "fltpot:magic_powder"
     },
     "title": {
       "translate": "advancements.fltpot.craft_magic_powder.title"

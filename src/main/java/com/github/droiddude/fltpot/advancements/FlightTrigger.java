@@ -27,7 +27,7 @@ public class FlightTrigger extends SimpleCriterionTrigger<FlightTrigger.TriggerI
 
     public static record TriggerInstance(Optional<ContextAwarePredicate> player, Optional<DistancePredicate> distance, MinMaxBounds.Ints duration) implements SimpleCriterionTrigger.SimpleInstance {
         public static final Codec<FlightTrigger.TriggerInstance> CODEC = RecordCodecBuilder.create((parameter) -> {
-            return parameter.group(ExtraCodecs.strictOptionalField(EntityPredicate.ADVANCEMENT_CODEC, "player").forGetter(FlightTrigger.TriggerInstance::player), ExtraCodecs.strictOptionalField(DistancePredicate.CODEC, "distance").forGetter(FlightTrigger.TriggerInstance::distance), ExtraCodecs.strictOptionalField(MinMaxBounds.Ints.CODEC, "duration", MinMaxBounds.Ints.ANY).forGetter(FlightTrigger.TriggerInstance::duration)).apply(parameter, FlightTrigger.TriggerInstance::new);
+            return parameter.group(EntityPredicate.ADVANCEMENT_CODEC.optionalFieldOf("player").forGetter(FlightTrigger.TriggerInstance::player), DistancePredicate.CODEC.optionalFieldOf("distance").forGetter(FlightTrigger.TriggerInstance::distance), MinMaxBounds.Ints.CODEC.optionalFieldOf("duration", MinMaxBounds.Ints.ANY).forGetter(FlightTrigger.TriggerInstance::duration)).apply(parameter, FlightTrigger.TriggerInstance::new);
         });
 
         public static Criterion<FlightTrigger.TriggerInstance> flown(DistancePredicate pDistance) {

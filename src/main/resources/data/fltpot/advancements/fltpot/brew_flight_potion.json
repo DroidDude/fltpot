@@ -1,8 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:potion",
-      "nbt": "{CustomPotionColor:8518842}"
+      "id": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+            "potion": "fltpot:flight_potion",
+            "custom_color": 8518842
+            }
+        }
     },
     "title": {
       "translate": "advancements.fltpot.brew_flight_potion.title"
