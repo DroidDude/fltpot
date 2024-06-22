@@ -28,7 +28,7 @@ public class ModelLayerRegistry {
 
     private static ModelLayerLocation register(String path){
 
-        return new ModelLayerLocation(new ResourceLocation(Main.MOD_ID, path), "main");
+        return new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Main.MOD_ID, path), "main");
 
     }
 

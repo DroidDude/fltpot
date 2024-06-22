@@ -177,13 +177,32 @@ public class Events {
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void addBrewingRecipes(BrewingRecipeRegisterEvent event) {
 
-        /*event.addRecipe(Potions.FlightPotion.INPUT, Potions.FlightPotion.REAGENT, Potions.FlightPotion.OUTPUT);
-        event.addRecipe(Potions.LongFlightPotion.INPUT, Potions.LongFlightPotion.REAGENT, Potions.LongFlightPotion.OUTPUT);
-        event.addRecipe(Potions.LevitationPotion.INPUT, Potions.LevitationPotion.REAGENT, Potions.LevitationPotion.OUTPUT);*/
         event.addRecipe(new Potions.FlightPotion(null, null, null));
         event.addRecipe(new Potions.LevitationPotion(null, null, null));
         event.addRecipe(new Potions.LongFlightPotion(null, null, null));
         Main.LOGGER.info("Added Brewing Recipes.");
+
+    }
+
+    @SubscribeEvent
+    public static void wingsTick(TickEvent.PlayerTickEvent event) {
+
+        if (event.phase != TickEvent.Phase.END) return;
+
+        Player player = event.player;
+
+        if(player.level().isClientSide || player.isCreative() || player.isSpectator() || !player.getAbilities().flying || !equipped(player, chest, Items.WINGS.get())) return;
+
+        WingsItem wings = (WingsItem) player.getItemBySlot(chest).getItem();
+
+        if (wings.canWingsFly(player.getItemBySlot(chest), player)) {
+
+            if (!player.isPassenger() && !player.hasEffect(Effects.LEVITATION)) wings.tick++;
+            else wings.tick = 0;
+
+        } else wings.tick = 0;
+
+        wings.wingsFlightTick(player.getItemBySlot(chest), player, wings.tick);
 
     }
 
