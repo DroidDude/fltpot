@@ -72,8 +72,8 @@ public class WingsItem extends Item implements Equipable {
         return EquipmentSlot.CHEST;
     }
 
-    private int tick = 0;
-    @Override
+    public int tick = 0;
+    //@Override
     public void onArmorTick(ItemStack stack, Level level, Player player) {
 
         if(player.level().isClientSide) return;

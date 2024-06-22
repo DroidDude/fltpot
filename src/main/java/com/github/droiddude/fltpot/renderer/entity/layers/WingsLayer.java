@@ -23,7 +23,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
 public class WingsLayer<T extends LivingEntity, M extends EntityModel<T>> extends RenderLayer<T, M> {
-    private static final ResourceLocation WINGS_LOCATION = new ResourceLocation(Main.MOD_ID,"textures/entity/wings.png");
+    private static final ResourceLocation WINGS_LOCATION = ResourceLocation.fromNamespaceAndPath(Main.MOD_ID, "textures/entity/wings.png");
     private final WingsModel<T> wingsModel;
 
     public WingsLayer(RenderLayerParent<T, M> pRenderer, EntityModelSet pModelSet) {
@@ -47,8 +47,8 @@ public class WingsLayer<T extends LivingEntity, M extends EntityModel<T>> extend
             pMatrixStack.translate(0.0F, 0.0F, 0.125F);
             this.getParentModel().copyPropertiesTo(this.wingsModel);
             this.wingsModel.setupAnim(pLivingEntity, pLimbSwing, pLimbSwingAmount, pAgeInTicks, pNetHeadYaw, pHeadPitch);
-            VertexConsumer vertexconsumer = ItemRenderer.getArmorFoilBuffer(pBuffer, RenderType.armorCutoutNoCull(resourcelocation), false, itemstack.hasFoil());
-            this.wingsModel.renderToBuffer(pMatrixStack, vertexconsumer, pPackedLight, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+            VertexConsumer vertexconsumer = ItemRenderer.getArmorFoilBuffer(pBuffer, RenderType.armorCutoutNoCull(resourcelocation), itemstack.hasFoil());
+            this.wingsModel.renderToBuffer(pMatrixStack, vertexconsumer, pPackedLight, OverlayTexture.NO_OVERLAY);
             pMatrixStack.popPose();
 
         }

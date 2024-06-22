@@ -8,11 +8,12 @@ buildscript {
 }
 
 plugins {
+    id 'java'
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
-    id 'org.spongepowered.mixin' version '0.7.+'
+    id 'org.spongepowered.mixin' version '0.7-SNAPSHOT'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
@@ -160,8 +161,15 @@ dependencies {
 
 mixin {
     // MixinGradle Settings
-    add sourceSets.main, 'fltpot.refmap.json'
-    config 'fltpot.mixins.json'
+    config("${mod_id}.mixins.json")
+}
+
+jar {
+    manifest {
+        attributes([
+                "MixinConfigs": "${mod_id}.mixins.json"
+        ])
+    }
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -174,7 +182,7 @@ tasks.named('processResources', ProcessResources).configure {
             forge_version: forge_version, forge_version_range: forge_version_range,
             loader_version_range: loader_version_range,
             mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
-            mod_authors: mod_authors, mod_description: mod_description, pack_format_number: pack_format_number,
+            mod_authors: mod_authors, mod_description: mod_description, pack_format_number: pack_format_number, server_data_pack_format_number: server_data_pack_format_number,
     ]
     inputs.properties replaceProperties
 
