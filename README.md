@@ -1,5 +1,5 @@
 
-Flight Potion Beta 1.21-0.3.4
+Flight Potion Beta 1.21-0.3.5
 =======
 
 A Minecraft mod, that adds some features related to flight.
@@ -60,12 +60,10 @@ Custom Advancement Trigger FlightTrigger
 
 Change Logs:
 ============
-Beta 1.21-0.3.4
+Beta 1.21-0.3.5
 
-- Updated to Forge 51.0.16
-- Added the #fltpot:strange_dust_ores tag
-- Fixed Mixin issue
-- Fixed issue, when in Spectator mode Wings would drain durability
+- Updated to Forge 51.0.17
+- Fixed [Issue #14](https://github.com/DroidDude/fltpot/issues/14)
 
 Licence:
 ============
