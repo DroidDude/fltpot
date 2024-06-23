@@ -12,7 +12,7 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
-    id 'org.spongepowered.mixin' version '0.7.+'
+    id 'org.spongepowered.mixin' version '0.7-SNAPSHOT'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
@@ -160,8 +160,15 @@ dependencies {
 
 mixin {
     // MixinGradle Settings
-    add sourceSets.main, 'fltpot.refmap.json'
-    config 'fltpot.mixins.json'
+    config("${mod_id}.mixins.json")
+}
+
+jar {
+    manifest {
+        attributes([
+                "MixinConfigs": "${mod_id}.mixins.json"
+        ])
+    }
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

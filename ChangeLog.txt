@@ -1,4 +1,4 @@
-Beta 1.20.4-0.3.2
+Beta 1.20.6-0.3.5
 
-- Updated to Forge 49.0.22
-- Fixed [Issue #7](https://github.com/DroidDude/fltpot/issues/7)
+- Updated to Forge 50.1.7
+- Fixed [Issue #14](https://github.com/DroidDude/fltpot/issues/14)
