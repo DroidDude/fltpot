@@ -1,0 +1,60 @@
+{
+  //Предметы
+  "item.fltpot.strange_dust": "Странная пыль",
+  "item.fltpot.magic_powder": "Волшебный порошок",
+  "item.fltpot.magic_nugget": "Волшебный самородок",
+  "item.fltpot.magic_ingot": "Волшебный слиток",
+
+  //Экипировка
+  "item.fltpot.wings": "Крылья",
+
+  //Блоки
+  "block.fltpot.strange_dust_ore": "Руда странной пыли",
+  "block.fltpot.deepslate_strange_dust_ore": "Глубинносланцевая руда странной пыли",
+
+  //Зелья
+  "item.minecraft.potion.effect.flight_potion": "Зелье полёта",
+  "item.minecraft.potion.effect.long_flight_potion": "Зелье полёта",
+  "item.minecraft.splash_potion.effect.flight_potion": "Взрывное зелье полёта",
+  "item.minecraft.splash_potion.effect.long_flight_potion": "Взрывное зелье полёта",
+  "item.minecraft.lingering_potion.effect.flight_potion": "Туманное зелье полёта",
+  "item.minecraft.lingering_potion.effect.long_flight_potion": "Туманное зелье полёта",
+  "item.minecraft.potion.flight_potion": "Зелье полёта",
+  "item.minecraft.potion.long_flight_potion": "Зелье полёта",
+  "item.minecraft.splash_effect.flight_potion": "Зелье полёта",
+  "item.minecraft.splash_effect.long_flight_potion": "Зелье полёта",
+  "item.minecraft.lingering_effect.flight_potion": "Зелье полёта",
+  "item.minecraft.lingering_potion.long_flight_potion": "Зелье полёта",
+
+  //Обработанные стрелы
+  "item.minecraft.tipped_arrow.effect.flight_potion": "Стрела полёта",
+  "item.minecraft.tipped_arrow.effect.long_flight_potion": "Стрела полёта",
+  "item.minecraft.tipped_arrow.flight_potion": "Зелье полёта",
+  "item.minecraft.tipped_arrow.long_flight_potion": "Зелье полёта",
+
+  //Эффекты
+  "effect.fltpot.flight_effect": "Полёт",
+
+  //Вкладка в креативе
+  "itemGroup.flight_potion_tab": "Зелье Полёта",
+
+  //Достижения
+  "advancements.fltpot.root.title": "Очередное приключение",
+  "advancements.fltpot.root.description": "Здесь может быть спрятано что-то очень странное...",
+  "advancements.fltpot.get_strange_dust.title": "Разве это не странно?",
+  "advancements.fltpot.get_strange_dust.description": "Найдите и добудьте руду странной пыли",
+  "advancements.fltpot.craft_magic_powder.title": "Что это витает в воздухе?",
+  "advancements.fltpot.craft_magic_powder.description": "Создайте волшебный порошок",
+  "advancements.fltpot.brew_flight_potion.title": "Зелье, позволяющее летать?",
+  "advancements.fltpot.brew_flight_potion.description": "Сварите зелье полета",
+  "advancements.fltpot.kill_levitating.title": "Летающая цель",
+  "advancements.fltpot.kill_levitating.description": "Убейте моба, пока он левитирует",
+  "advancements.fltpot.smelt_magic_nugget.title": "Волшебный сплав",
+  "advancements.fltpot.smelt_magic_nugget.description": "Переплавьте волшебный порошок в волшебные самородки, а затем создайте волшебный слиток.",
+  "advancements.fltpot.craft_wings.title": "Окрыляет!",
+  "advancements.fltpot.craft_wings.description": "Улучшите элитры и экипируйте свои новые крылья!",
+  "advancements.fltpot.flight_distance.title": "За тридевять земель",
+  "advancements.fltpot.flight_distance.description": "Пролетите на крыльях 5 километров от места взлёта",
+  "advancements.fltpot.flight.title": "Обученный пилот",
+  "advancements.fltpot.flight.description": "Летайте на крыльях целый день"
+}
