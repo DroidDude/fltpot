@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern":
+    [
+        "NNN",
+        "NNN",
+        "NNN"
+    ],
+    "key":
+    {
+        "N":
+        {
+            "item": "fltpot:magic_ingot"
+        }
+    },
+    "result":
+    {
+        "id": "fltpot:magic_alloy_block"
+    }
+}

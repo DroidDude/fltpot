@@ -13,7 +13,6 @@ import net.minecraft.stats.Stats;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MoverType;
-import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -195,14 +194,7 @@ public class Events {
 
         WingsItem wings = (WingsItem) player.getItemBySlot(chest).getItem();
 
-        if (wings.canWingsFly(player.getItemBySlot(chest), player)) {
-
-            if (!player.isPassenger() && !player.hasEffect(Effects.LEVITATION)) wings.tick++;
-            else wings.tick = 0;
-
-        } else wings.tick = 0;
-
-        wings.wingsFlightTick(player.getItemBySlot(chest), player, wings.tick);
+        wings.onTick(player.getItemBySlot(chest), player);
 
     }
 
