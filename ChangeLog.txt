@@ -1,4 +1,10 @@
-Beta 1.21-0.3.5
+Beta 1.21-0.4.0
 
-- Updated to Forge 51.0.17
-- Fixed [Issue #14](https://github.com/DroidDude/fltpot/issues/14)
+- Updated to Forge 51.0.33
+- Added Block of Magic Alloy
+- Added Smithing Template Wings Upgrade
+- Added Temple Structure
+- Removed Wings Crafting Recipe
+- Code Optimizations
+- Minor Bugfixes
+- Magic Nugget texture rotated for better differentiation

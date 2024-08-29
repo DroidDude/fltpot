@@ -14,8 +14,8 @@ import java.util.Optional;
 
 public class FlightTrigger extends SimpleCriterionTrigger<FlightTrigger.TriggerInstance> {
     static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(Main.MOD_ID, "flight");
-    public Codec<TriggerInstance> codec() {
-        return TriggerInstance.CODEC;
+    public Codec<FlightTrigger.TriggerInstance> codec() {
+        return FlightTrigger.TriggerInstance.CODEC;
     }
 
     public void trigger(ServerPlayer pPlayer, Vec3 pStartPos, int pDuration) {
@@ -26,13 +26,13 @@ public class FlightTrigger extends SimpleCriterionTrigger<FlightTrigger.TriggerI
 
 
     public static record TriggerInstance(Optional<ContextAwarePredicate> player, Optional<DistancePredicate> distance, MinMaxBounds.Ints duration) implements SimpleCriterionTrigger.SimpleInstance {
-        public static final Codec<TriggerInstance> CODEC = RecordCodecBuilder.create((parameter) -> {
-            return parameter.group(EntityPredicate.ADVANCEMENT_CODEC.optionalFieldOf("player").forGetter(TriggerInstance::player), DistancePredicate.CODEC.optionalFieldOf("distance").forGetter(TriggerInstance::distance), MinMaxBounds.Ints.CODEC.optionalFieldOf("duration", MinMaxBounds.Ints.ANY).forGetter(TriggerInstance::duration)).apply(parameter, TriggerInstance::new);
+        public static final Codec<FlightTrigger.TriggerInstance> CODEC = RecordCodecBuilder.create((parameter) -> {
+            return parameter.group(EntityPredicate.ADVANCEMENT_CODEC.optionalFieldOf("player").forGetter(FlightTrigger.TriggerInstance::player), DistancePredicate.CODEC.optionalFieldOf("distance").forGetter(FlightTrigger.TriggerInstance::distance), MinMaxBounds.Ints.CODEC.optionalFieldOf("duration", MinMaxBounds.Ints.ANY).forGetter(FlightTrigger.TriggerInstance::duration)).apply(parameter, FlightTrigger.TriggerInstance::new);
         });
 
-        public static Criterion<TriggerInstance> flown(DistancePredicate pDistance) {
+        public static Criterion<FlightTrigger.TriggerInstance> flown(DistancePredicate pDistance) {
 
-            return CriteriaTriggers.FLIGHT.createCriterion(new TriggerInstance(Optional.empty(), Optional.of(pDistance), MinMaxBounds.Ints.ANY));
+            return CriteriaTriggers.FLIGHT.createCriterion(new FlightTrigger.TriggerInstance(Optional.empty(), Optional.of(pDistance), MinMaxBounds.Ints.ANY));
 
         }
 

@@ -18,6 +18,8 @@ import net.minecraft.world.level.block.DispenserBlock;
 
 public class WingsItem extends Item implements Equipable {
 
+    private int tick = 0;
+
     public WingsItem(Item.Properties properties) {
 
         super(properties);
@@ -72,9 +74,7 @@ public class WingsItem extends Item implements Equipable {
         return EquipmentSlot.CHEST;
     }
 
-    public int tick = 0;
-    //@Override
-    public void onArmorTick(ItemStack stack, Level level, Player player) {
+    public void onTick(ItemStack stack, Player player) {
 
         if(player.level().isClientSide) return;
 

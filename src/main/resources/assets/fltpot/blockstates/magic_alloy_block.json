@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "fltpot:block/magic_alloy_block" }
+    }
+}

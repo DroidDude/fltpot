@@ -71,6 +71,7 @@ public class CreativeTab {
             event.getEntries().putAfter(Items.NETHERITE_INGOT.getDefaultInstance(), Items.MAGIC_INGOT.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.DISC_FRAGMENT_5.getDefaultInstance(), Items.STRANGE_DUST.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.GHAST_TEAR.getDefaultInstance(), Items.MAGIC_POWDER.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE.getDefaultInstance(), Items.WINGS_UPGRADE_SMITHING_TEMPLATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
         }
 

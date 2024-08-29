@@ -8,9 +8,17 @@
 	//Wearables
 	"item.fltpot.wings": "Wings",
 
+	//Smithing Templates
+	"item.fltpot.wings_upgrade_smithing_template": "Smithing Template",
+	"item.fltpot.smithing_template.wings_upgrade.applies_to": "Elytra",
+	"item.fltpot.smithing_template.wings_upgrade.ingredients": "Magic Ingot",
+	"item.fltpot.smithing_template.wings_upgrade.base_slot_description": "Add Elytra",
+	"item.fltpot.smithing_template.wings_upgrade.additions_slot_description": "Add Magic Ingot",
+
 	//Blocks
 	"block.fltpot.strange_dust_ore": "Strange Dust Ore",
 	"block.fltpot.deepslate_strange_dust_ore": "Deepslate Strange Dust Ore",
+	"block.fltpot.magic_alloy_block": "Block of Magic Alloy",
 	
 	//Potions
 	"item.minecraft.potion.effect.flight_potion": "Potion of Flight",
@@ -56,6 +64,9 @@
 	"advancements.fltpot.flight_distance.title": "Far far away",
 	"advancements.fltpot.flight_distance.description": "Fly at least 5 km from where you started",
 	"advancements.fltpot.flight.title": "Trained pilot",
-	"advancements.fltpot.flight.description": "Fly for a total of one day"
+	"advancements.fltpot.flight.description": "Fly for a total of one day",
+
+	//Upgrade
+	"upgrade.fltpot.wings_upgrade": "Wings Upgrade"
 
 }
