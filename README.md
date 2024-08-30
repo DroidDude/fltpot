@@ -1,5 +1,5 @@
 
-Flight Potion Beta 1.21-0.4.0
+Flight Potion Beta 1.21-0.4.1
 =======
 
 A Minecraft mod, that adds some features related to flight.
@@ -73,16 +73,9 @@ Custom Advancement Trigger FlightTrigger
 
 Change Logs:
 ============
-Beta 1.21-0.4.0
+Beta 1.21-0.4.1
 
-- Updated to Forge 51.0.33
-- Added Block of Magic Alloy
-- Added Smithing Template Wings Upgrade
-- Added Temple Structure
-- Removed Wings Crafting Recipe
-- Code Optimizations
-- Minor Bugfixes
-- Magic Nugget texture rotated for better differentiation
+- Bug fixes
 
 Licence:
 ============

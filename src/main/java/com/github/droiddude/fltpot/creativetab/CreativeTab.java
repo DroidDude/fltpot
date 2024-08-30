@@ -65,6 +65,12 @@ public class CreativeTab {
 
         }
 
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+
+            event.getEntries().putAfter(Items.NETHERITE_BLOCK.getDefaultInstance(), Items.MAGIC_ALLOY_BLOCK.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+        }
+
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 
             event.getEntries().putAfter(Items.GOLD_NUGGET.getDefaultInstance(), Items.MAGIC_NUGGET.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
