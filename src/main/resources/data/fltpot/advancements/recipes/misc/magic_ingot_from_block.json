@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "fltpot:magic_ingot"
+      "fltpot:magic_ingot_from_block"
     ]
   },
   "criteria": {
@@ -12,7 +12,7 @@
         "items": [
           {
             "items": [
-              "fltpot:magic_nugget"
+              "fltpot:magic_alloy_block"
             ]
           }
         ]
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "fltpot:magic_ingot"
+        "recipe": "fltpot:magic_ingot_from_block"
       }
     }
   },

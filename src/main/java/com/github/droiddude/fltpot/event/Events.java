@@ -13,7 +13,6 @@ import net.minecraft.stats.Stats;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MoverType;
-import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -177,9 +176,6 @@ public class Events {
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void addBrewingRecipes(BrewingRecipeRegisterEvent event) {
 
-        /*event.addRecipe(Potions.FlightPotion.INPUT, Potions.FlightPotion.REAGENT, Potions.FlightPotion.OUTPUT);
-        event.addRecipe(Potions.LongFlightPotion.INPUT, Potions.LongFlightPotion.REAGENT, Potions.LongFlightPotion.OUTPUT);
-        event.addRecipe(Potions.LevitationPotion.INPUT, Potions.LevitationPotion.REAGENT, Potions.LevitationPotion.OUTPUT);*/
         event.addRecipe(new Potions.FlightPotion(null, null, null));
         event.addRecipe(new Potions.LevitationPotion(null, null, null));
         event.addRecipe(new Potions.LongFlightPotion(null, null, null));

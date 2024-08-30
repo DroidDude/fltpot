@@ -54,9 +54,6 @@ public class Main {
 
     private void setup(final FMLCommonSetupEvent event) {
 
-        /*Potions.addBrewingRecipe();
-        LOGGER.info("Added Brewing Recipes.");*/
-
         if (FMLEnvironment.dist == Dist.CLIENT) {
 
             ItemProperties.registerProperties();

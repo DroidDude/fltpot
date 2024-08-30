@@ -1,13 +1,18 @@
 {
   "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "fltpot:magic_ingot_from_nuggets"
+    ]
+  },
   "criteria": {
-    "has_elytra": {
+    "has_magic_nugget": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:elytra"
+              "fltpot:magic_nugget"
             ]
           }
         ]
@@ -16,20 +21,14 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "fltpot:wings"
+        "recipe": "fltpot:magic_ingot_from_nuggets"
       }
     }
   },
   "requirements": [
     [
-      "has_elytra",
+      "has_magic_nugget",
       "has_the_recipe"
     ]
-  ],
-  "rewards": {
-    "recipes": [
-      "fltpot:wings"
-    ]
-  },
-  "sends_telemetry_event": false
+  ]
 }

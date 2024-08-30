@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "group": "magic_ingot",
+    "ingredients":
+    [
+        {
+            "item": "fltpot:magic_alloy_block"
+        }
+    ],
+    "result":
+    {
+        "id": "fltpot:magic_ingot",
+        "count": 9
+    }
+}

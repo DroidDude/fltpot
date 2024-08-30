@@ -1,5 +1,5 @@
 
-Flight Potion Beta 1.20.6-0.3.5
+Flight Potion Beta 1.20.6-0.4.1
 =======
 
 A Minecraft mod, that adds some features related to flight.
@@ -18,7 +18,7 @@ Potion of Levitation
 - Is created by brewing a Flight Potion with a Fermented Spider Eye.
 
 Wings
-- Is crafted by combining 6 Magic Ingots, 1 Nether Star and Elytra.
+- Is obtained by upgrading Elytra with Wings Upgrade Smithing Template.
 - Equipped will grant the player flight until the durability runs out.
 - Can be enchanted.
 - They are equipped in the chest armor slot, like Elytra.
@@ -33,6 +33,10 @@ Strange Dust
 - Is obtained by mining Strange Dust Ore with a Diamond Pickaxe or higher.
 - Is used for crafting Magic Powder.
 
+Block of Magic Alloy
+- Is crafted by combining 9 Magic Ingots.
+- Is used to duplicate Wings Upgrade Smithing Template.
+
 Magic Powder
 - Is crafted by combining 6 Strange Dust, 1 Ghast Tear, 1 Redstone and 1 Glowstone Dust
 - Is used for smelting into Magic Nuggets.
@@ -45,11 +49,20 @@ Magic Nuggets
 Magic Ingots
 - Is crafted by combining 9 Magic Nuggets.
 - Is used for repairing Wings.
-- Is used for crafting Wings.
+
+Wings Upgrade
+- Is obtained by looting a Temple Chest.
+- Is used for upgrading Elytra to Wings.
+- Can be duplicated with a Block of Magic Alloy and 8 Diamonds.
+
+Temple
+- This structure is generated in the Cherry Grove biome.
+- Spawns a Loot Chest.
 
 Loot
 - Magic Nuggets can be found in Ancient Cities.
 - Potions of Flight can be found in End Cities.
+- Wings Upgrade Smithing Template have a 50% chance to be found in a Temple.
 
 Advancements
 - A whole new Advancement Tree can be unlocked.
@@ -60,10 +73,10 @@ Custom Advancement Trigger FlightTrigger
 
 Change Logs:
 ============
-Beta 1.20.6-0.3.5
+Beta 1.20.6-0.4.1
 
-- Updated to Forge 50.1.7
-- Fixed [Issue #14](https://github.com/DroidDude/fltpot/issues/14)
+- Updated to Forge 50.1.14
+- Bug fixes
 
 Licence:
 ============

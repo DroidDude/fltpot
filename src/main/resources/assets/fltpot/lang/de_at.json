@@ -8,9 +8,17 @@
 	//Wearables
     "item.fltpot.wings": "Flügl",
 
+	//Smithing Templates
+	"item.fltpot.wings_upgrade_smithing_template": "Schmiedevorlog",
+	"item.fltpot.smithing_template.wings_upgrade.applies_to": "Elytren",
+	"item.fltpot.smithing_template.wings_upgrade.ingredients": "Magischa Borrn",
+	"item.fltpot.smithing_template.wings_upgrade.base_slot_description": "Elytren hinzuafügn",
+	"item.fltpot.smithing_template.wings_upgrade.additions_slot_description": "Magischa Borrn hinzuafügn",
+
 	//Blocks
 	"block.fltpot.strange_dust_ore": "Eigenortiges Mineral",
 	"block.fltpot.deepslate_strange_dust_ore": "Eigenortiges Tiafenschiefa Mineral",
+	"block.fltpot.magic_alloy_block": "Magische-Legierungs-Block",
 	
 	//Potions
 	"item.minecraft.potion.effect.flight_potion": "Tronk des Fluges",
@@ -40,11 +48,11 @@
 
     //Advancements
 	"advancements.fltpot.root.title": "Nu a Abnteuer",
-	"advancements.fltpot.root.description": "Es könnte si do eppas Eignortiges vasteckn.",
+	"advancements.fltpot.root.description": "Es könnte si do eppas Eignortiges vasteckn",
 	"advancements.fltpot.get_strange_dust.title": "Is es net Eignortig?",
 	"advancements.fltpot.get_strange_dust.description": "Entdeck und bau Eignortige Mineral o",
 	"advancements.fltpot.craft_magic_powder.title": "Magischs Puiva is in da Luft",
-	"advancements.fltpot.craft_magic_powder.description": "Stö Magische Puiva hea",
+	"advancements.fltpot.craft_magic_powder.description": "Stö Magischs Puiva hea",
 	"advancements.fltpot.brew_flight_potion.title": "A Tronk, dea di fliagn losst?",
 	"advancements.fltpot.brew_flight_potion.description": "Brau an Tronk des Fluges",
 	"advancements.fltpot.kill_levitating.title": "Fliagends Ziel",
@@ -53,9 +61,12 @@
 	"advancements.fltpot.smelt_magic_nugget.description": "Schmöz Magischs Puiva zu Magische Klumpn, stö noa an Magischn Borrn hea",
 	"advancements.fltpot.craft_wings.title": "Es verleiht Flügel",
 	"advancements.fltpot.craft_wings.description": "Vabessa Elytra und ziach deine Flügel u",
-	"advancements.fltpot.flight_distance.title": "Weit weit wek",
+	"advancements.fltpot.flight_distance.title": "Weit, weit wek",
 	"advancements.fltpot.flight_distance.description": "Fliag mindestns fünf Kilometa auf oamoi",
 	"advancements.fltpot.flight.title": "Ausgebildeta Pilot",
-	"advancements.fltpot.flight.description": "Fliag fia insgesomt oan Tog"
+	"advancements.fltpot.flight.description": "Fliag fia insgesomt oan Tog",
+
+	//Upgrade
+	"upgrade.fltpot.wings_upgrade": "Flüglaufwertung"
 	
 }

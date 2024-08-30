@@ -8,7 +8,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraftforge.api.distmarker.Dist;
@@ -65,12 +64,19 @@ public class CreativeTab {
 
         }
 
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+
+            event.getEntries().putAfter(Items.NETHERITE_BLOCK.getDefaultInstance(), Items.MAGIC_ALLOY_BLOCK.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+        }
+
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 
             event.getEntries().putAfter(Items.GOLD_NUGGET.getDefaultInstance(), Items.MAGIC_NUGGET.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.NETHERITE_INGOT.getDefaultInstance(), Items.MAGIC_INGOT.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.DISC_FRAGMENT_5.getDefaultInstance(), Items.STRANGE_DUST.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.GHAST_TEAR.getDefaultInstance(), Items.MAGIC_POWDER.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE.getDefaultInstance(), Items.WINGS_UPGRADE_SMITHING_TEMPLATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
         }
 
