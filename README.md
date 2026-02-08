@@ -1,5 +1,5 @@
 
-Flight Potion Beta 1.20.1-0.3.2
+Flight Potion Beta 1.20.1-0.4.1
 =======
 
 A Minecraft mod, that adds some features related to flight.
@@ -18,7 +18,7 @@ Potion of Levitation
 - Is created by brewing a Flight Potion with a Fermented Spider Eye.
 
 Wings
-- Is crafted by combining 6 Magic Ingots, 1 Nether Star and Elytra.
+- Is obtained by upgrading Elytra with Wings Upgrade Smithing Template.
 - Equipped will grant the player flight until the durability runs out.
 - Can be enchanted.
 - They are equipped in the chest armor slot, like Elytra.
@@ -32,6 +32,10 @@ Strange Dust Ore
 Strange Dust
 - Is obtained by mining Strange Dust Ore with a Diamond Pickaxe or higher.
 - Is used for crafting Magic Powder.
+
+Block of Magic Alloy
+- Is crafted by combining 9 Magic Ingots.
+- Is used to duplicate Wings Upgrade Smithing Template.
 
 Magic Powder
 - Is crafted by combining 6 Strange Dust, 1 Ghast Tear, 1 Redstone and 1 Glowstone Dust
@@ -47,9 +51,19 @@ Magic Ingots
 - Is used for repairing Wings.
 - Is used for crafting Wings.
 
+Wings Upgrade
+- Is obtained by looting a Temple Chest.
+- Is used for upgrading Elytra to Wings.
+- Can be duplicated with a Block of Magic Alloy and 8 Diamonds.
+
+Temple
+- This structure is generated in the Cherry Grove biome.
+- Spawns a Loot Chest.
+
 Loot
 - Magic Nuggets can be found in Ancient Cities.
 - Potions of Flight can be found in End Cities.
+- Wings Upgrade Smithing Template have a 50% chance to be found in a Temple.
 
 Advancements
 - A whole new Advancement Tree can be unlocked.
@@ -60,17 +74,15 @@ Custom Advancement Trigger FlightTrigger
 
 Change Logs:
 ============
-Beta 1.20.1-0.3.2
+Beta 1.20.1-0.4.1
 
-- Updated to latest NeoForge version 47.1.96
-- Updated to latest ParchmentMC version 2023.09.03
-- Fixed [Issue #7](https://github.com/DroidDude/fltpot/issues/7)
+- Bug fixes
 
 Licence:
 ============
 MIT License
 
-Copyright (c) 2024 DroidDude
+Copyright (c) 2026 DroidDude
 
 This license applies to the Minecraft mod files as supplied by github.com/DroidDude/fltpot/src
 

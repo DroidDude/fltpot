@@ -7,6 +7,7 @@ import com.github.DroidDude.fltpot.item.WingsItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.stats.Stats;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MoverType;
@@ -43,6 +44,7 @@ public class Events {
     }
 
     private static Vec3 toVec3(String input) {
+
 
         input = input.substring(2, input.length() - 2).replace(" ", "");
         String[] vecString = input.split(",");
@@ -132,7 +134,12 @@ public class Events {
 
         }
 
+        if (distance >= 2.0F) {
+            player.awardStat(Stats.FALL_ONE_CM, (int)Math.round(distance * 100.0));
+        }
+
     }
+
 
     @SubscribeEvent
     public static void flightCheck(TickEvent.PlayerTickEvent event) {

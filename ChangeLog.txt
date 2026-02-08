@@ -1,5 +1,3 @@
-Beta 1.20.1-0.3.2
+Beta 1.20.1-0.4.1
 
-- Updated to latest NeoForge version 47.1.96
-- Updated to latest ParchmentMC version 2023.09.03
-- Fixed [Issue #7](https://github.com/DroidDude/fltpot/issues/7)
+- Bug fixes

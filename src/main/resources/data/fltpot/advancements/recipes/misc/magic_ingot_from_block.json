@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "fltpot:magic_ingot_from_block"
+    ]
+  },
+  "criteria": {
+    "has_magic_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fltpot:magic_alloy_block"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "fltpot:magic_ingot_from_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_magic_nugget",
+      "has_the_recipe"
+    ]
+  ]
+}

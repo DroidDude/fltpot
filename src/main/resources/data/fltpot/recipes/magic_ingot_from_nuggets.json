@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "magic_ingot",
+    "pattern":
+    [
+        "NNN",
+        "NNN",
+        "NNN"
+    ],
+    "key":
+    {
+        "N":
+        {
+            "item": "fltpot:magic_nugget"
+        }
+    },
+    "result":
+    {
+        "item": "fltpot:magic_ingot"
+    }
+}

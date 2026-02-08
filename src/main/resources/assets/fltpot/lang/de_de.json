@@ -8,9 +8,17 @@
 	//Wearables
     "item.fltpot.wings": "Flügel",
 
+	//Smithing Templates
+	"item.fltpot.wings_upgrade_smithing_template": "Schmiedevorlage",
+	"item.fltpot.smithing_template.wings_upgrade.applies_to": "Elytren",
+	"item.fltpot.smithing_template.wings_upgrade.ingredients": "Magischer Barren",
+	"item.fltpot.smithing_template.wings_upgrade.base_slot_description": "Elytren hinzufügen",
+	"item.fltpot.smithing_template.wings_upgrade.additions_slot_description": "Magischer Barren hinzufügen",
+
 	//Blocks
 	"block.fltpot.strange_dust_ore": "Eigenartiges Mineral",
 	"block.fltpot.deepslate_strange_dust_ore": "Eigenartiges Tiefenschiefer Mineral",
+	"block.fltpot.magic_alloy_block": "Magische-Legierungs-Block",
 	
 	//Potions
 	"item.minecraft.potion.effect.flight_potion": "Trank des Fluges",
@@ -47,11 +55,18 @@
 	"advancements.fltpot.craft_magic_powder.description": "Stelle Magisches Pulver her",
 	"advancements.fltpot.brew_flight_potion.title": "Ein Trank, der dich fliegen lässt?",
 	"advancements.fltpot.brew_flight_potion.description": "Braue einen Trank des Fluges",
+	"advancements.fltpot.kill_levitating.title": "Fliegendes Ziel",
+	"advancements.fltpot.kill_levitating.description": "Töte eine schwebende Kreatur",
 	"advancements.fltpot.smelt_magic_nugget.title": "Magische Legierung",
 	"advancements.fltpot.smelt_magic_nugget.description": "Schmelze Magisches Pulver zu Magische Klumpen, stelle dann einen Magischen Barren her",
 	"advancements.fltpot.craft_wings.title": "Es verleiht Flügel",
-	"advancements.fltpot.craft_wings.description": "Verbessere Elytra und zieh deine Flügel an",
+	"advancements.fltpot.craft_wings.description": "Verbessere Elytren und zieh deine Flügel an",
+	"advancements.fltpot.flight_distance.title": "Weit, weit weg",
+	"advancements.fltpot.flight_distance.description": "Fliege mindestens fünf Kilometer an einem Stück",
 	"advancements.fltpot.flight.title": "Ausgebildeter Pilot",
-	"advancements.fltpot.flight.description": "Fliege für insgesamt einen Tag"
+	"advancements.fltpot.flight.description": "Fliege für insgesamt einen Tag",
+
+	//Upgrade
+	"upgrade.fltpot.wings_upgrade": "Flügelaufwertung"
 	
 }

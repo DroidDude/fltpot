@@ -18,16 +18,17 @@ public abstract class CapeLayerMixin {
 
     @Inject(
             method = "render(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/player/AbstractClientPlayer;FFFFFF)V",
-            at = @At("HEAD"),
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lcom/mojang/blaze3d/vertex/PoseStack;pushPose()V"),
             cancellable = true
     )
     private void onRender(PoseStack pMatrixStack, MultiBufferSource pBuffer, int pPackedLight, AbstractClientPlayer pLivingEntity, float pLimbSwing, float pLimbSwingAmount, float pPartialTicks, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch, CallbackInfo ci) {
 
-        if (pLivingEntity.isCapeLoaded() && !pLivingEntity.isInvisible() && pLivingEntity.isModelPartShown(PlayerModelPart.CAPE) && pLivingEntity.getCloakTextureLocation() != null) {
-            ItemStack itemstack = pLivingEntity.getItemBySlot(EquipmentSlot.CHEST);
-            if (itemstack.is(Items.ELYTRA) || itemstack.is(com.github.DroidDude.fltpot.item.Items.WINGS.get())) {
-                ci.cancel();
-            }
+        ItemStack itemstack = pLivingEntity.getItemBySlot(EquipmentSlot.CHEST);
+
+        if (itemstack.is(com.github.DroidDude.fltpot.item.Items.WINGS.get())) {
+            ci.cancel();
         }
     }
 }
